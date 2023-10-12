@@ -1,0 +1,19 @@
+# Ask: request 'Read'
+# id        : The discription you want to name. 
+# item      : More details please refer to the TM Expression Editor Manual(2.12 rev1.00) Chapter 14.6 TMSVR vs Chapter 14.2 svr_read
+# wait_time : set wait time.
+# More details please refer to the TM Expression Editor Manual(2.12 rev1.00) Chapter 14.6 TMSVR
+
+string id
+string item
+
+float64 wait_time
+
+---
+# ok        : read status 
+bool ok
+
+# id        : The discribtion you want to name.
+# value     : The value of asked item.
+string id
+string value

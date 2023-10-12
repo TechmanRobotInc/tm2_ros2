@@ -1,0 +1,18 @@
+#float64 DEFAULT_TIMEOUT = 1.0
+#float64 DEFAULT_TIMEVAL = 3.0
+#server :   TMSVR, TMSCT
+#connect/reconnect : In Connection phase. 
+#connect    == true. Keeping connect function
+#reconnect  == true. If connect funcition fail, It will reconnect.
+
+int8 TMSVR = 0
+int8 TMSCT = 1
+
+int8 server
+bool connect
+bool reconnect
+float64 timeout
+float64 timeval
+---
+#ok :   connect status
+bool ok

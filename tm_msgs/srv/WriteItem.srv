@@ -1,0 +1,10 @@
+# 'Write'
+# id        : name
+# item/value: More details please refer to the TM Expression Editor Manual(2.12 rev1.00) Chapter 14.6 TMSVR vs Chapter 14.3 svr_write
+
+string id
+string item
+string value
+---
+#ok =   write status
+bool ok

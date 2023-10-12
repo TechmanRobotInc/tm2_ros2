@@ -1,0 +1,16 @@
+# More details please refer to the tm_ros2_sct.cpp/set_event function.
+int8 TAG = 1
+int8 WAIT_TAG = 2
+int8 STOP = 11
+int8 PAUSE = 12
+int8 RESUME = 13
+
+int8 EXIT = -1
+
+int8 func
+int8 arg0 # if fun is TAG or WAIT_TAG, arg0 is the tag number.
+int8 arg1 # if fun is TAG or WAIT_TAG, arg1 is timeout in ms.
+---
+#ok == complete status
+bool ok
+# int8 rv
