@@ -28,7 +28,7 @@ arg0 &rarr;  if func is TAG or WAIT_TAG, arg0 is the tag number<br/>
 arg1 &rarr;  if func is TAG or WAIT_TAG, arg1 is timeout in ms<br/>
 >
 > * demo_set_io:<br/>
-In this demo code, the user should set the module, type, pin, and state. <sup>4</sup> <br/>
+In this demo code, the user should set the module, type, pin and state. <sup>4</sup> <br/>
 module &rarr;  MODULE_CONTROLBOX or MODULE_ENDEFFECTOR<br/>
 type &rarr;  TYPE_DIGITAL_IN, TYPE_DIGITAL_OUT, TYPE_INSTANT_DO, TYPE_ANALOG_IN, TYPE_ANALOG_OUT, TYPE_INSTANT_AO<br/>
 pin &rarr;  pin number<br/>
@@ -59,7 +59,9 @@ In this demo code, the user can use send_script service sending a script to leav
 > 2. The user has successfully configured the network settings of the TM Robot and the user's PC in the same subnet. In other words, users have been able to ping the remote system on the same subnet successfully.
 >>:bulb: Tip:  For example, set the user computer IP address and remote TM Robot to 192.168.10.30 and 192.168.10.2 (Netmask: 255.255.255.0). Users can ping the remote IP address 192.168.10.2, by typing "ping 192.168.10.2".<br>
 >
-> <img src="./figures/ping_target_host.png" width="1000" height="220">
+<br/>
+
+  <img src="./figures/ping_target_host.png" width="1000" height="220">
 >
 > 3. The user already knows how to use _TMflow 2_ programming, especially to configure TM ROS _Ethernet Slave_ "Data Table Setting" and the Listen nodes programming through a flow project. In other words, the user has created and completed the Listen task with the TM ROS setting of a TMflow software process project.
 >>:bulb: Tip: The user can refer to the chapter introduced in the main text: _3. TM ROS driver usage and installation_ for quick and easy setup or refer to the _Software Manual TMflow_ for details.
@@ -67,7 +69,9 @@ In this demo code, the user can use send_script service sending a script to leav
 > 4. Remember to press the Play/Pause (&#9658;) button on the Robot Stick to start running this Listen task project under auto Mode.
 >>:bulb: Tip: If under Manual Mode, it requires the trigger of the _Enabling Switch_ function. Therefore, the user needs to press and hold the __Enabling Switch__ button slightly and continuously to press the Play/Pause (&#9658;) button to run the operation. The user can select to suspend _Enabling Switch_ on the UI of _TMflow_ &rArr;  Configuration &rArr; Safety, and the triggering effect of _Enabling Switch_ will be disabled. For details of the _Enabling Switch_ function, refer to the relevant contents in the _Safety Manual_ or the _Software Manual TMflow_.
 >
-> <img src="./figures/suspend_enabling switch_on.png" width="1000" height="320">
+<br/>
+
+  <img src="./figures/suspend_enabling switch_on.png" width="1000" height="320">
 >
 
 ## &sect; Usage with demo code & driver on the external Linux PC
@@ -78,7 +82,7 @@ In this demo code, the user can use send_script service sending a script to leav
 ``git clone https://github.com/TechmanRobotInc/tm2_ros2.git``<br/>
 > 3. After the download done, rename the download folder ``tm2_ros2``(or ``tm2_ros2-master``) to ``src`` by typing<br/>
 ``mv tm2_ros2 src``<br/>  (or right-click on the download folder, select "Rename...")<br/>
-> 4. At the workspace, directory to build the download packages and source 'setup.bash' in this workspace to make the workspace visible to ROS.<br/>
+> 4. At the workspace directory to build the download packages and source 'setup.bash' in this workspace to make the workspace visible to ROS.<br/>
 **Note**: Do you set ``source /opt/ros/foxy/setup.bash`` ready? Make sure to obtain the correct setup file according to your workspace hierarchy, and then type the following below to compile.<br/>
 ``colcon build``<br/>
 ``source ./install/setup.bash``<br/>

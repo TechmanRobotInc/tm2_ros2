@@ -17,19 +17,25 @@ The __Listen node__: a socket server can be established and be connected with RO
 >
 > 1. Create a _Listen task_ of flow project of __TMflow__ software, and then drag the __Listen node__ from the __Node List__ menu (&rArr; Communication &rArr; Listen) onto the project flow, as shown below.
 >
-> <img src="./figures/listen_task.png" width="1100" height="500">
+<br/>
+
+   <img src="./figures/listen_task.png" width="1000" height="500">
 >
 >
 > 2. Set the `Network` settings: mouse-click to enter the page of __System &rArr; Network__ in order.  
 > &#10148; Example: Set the Subnet mask: 255.255.255.0 and IP address 192.168.10.2  
 >> **Note**: Set the network mask and the communication with the TM Robot must be in the set domain.  
 >
-> <img src="./figures/network_setting.png" width="1100" height="500">
+<br/>
+
+   <img src="./figures/network_setting.png" width="1000" height="500">
 >
 >
 > 3. The __Ethernet Slave__ and `Data Table Setting` are no setup required. As the "__Configuration &rArr; ROS Setting__" is __Running__, the <u>build-in ROS Data Table Setting</u> will be automatically selected (as shown in the figure below, occupied by ROS). 
 >
-> <img src="./figures/occupied_by_ros.png" width="1100" height="500">
+<br/>
+
+   <img src="./figures/occupied_by_ros.png" width="1000" height="500">
 >
 >> The user can skip this step as follows: The following is only an introduction to the parameters of the ROS data table.
 >
@@ -78,14 +84,21 @@ The __Listen node__: a socket server can be established and be connected with RO
 > Static IP of remote connection network settings through the wired network.<br/> 
 >
 > 1. Set the wired network of the user's (remote) Ubuntu computer by mouse-click on the top right of the desktop &rArr; Click on "__Wired Settings__" &rArr; Click on the gear icon &rArr; In the IPv4 feature options, click on "Manual" in order.<br/> 
-> <img src="./figures/user_remote_network_settings.png" width="1000" height="500">
+<br/>
+
+   <img src="./figures/user_remote_network_settings.png" width="1000" height="500">
 > <br/>
 > 2. Set the Static IP settings: where the IP address is fixed for the first three yards same as the previous setting 192.168.10, last yards 3-254 machine numbers are available. (Because _TM ROBOT_, you have been set to 192.168.10.2)<br/> 
 > &#10148;  Example: Set the Netmask: 255.255.255.0 and IP address 192.168.10.30 <br/>
-> <img src="./figures/user_remote_IP_example.png" width="1000" height="500">
+<br/>
+
+   <img src="./figures/user_remote_IP_example.png" width="1000" height="500">
 > <br/>
 > 3. Check Internet connection: start a terminal to test the connectivity with the target host _TM ROBOT_, by typing ping 192.168.10.2
-> ![ping_target_host](./figures/ping_target_host.png)
+>
+<br/>
+
+   ![ping_target_host](./figures/ping_target_host.png)
 > <br/>
 >> :bulb: **Tip**: Remember to reconfigure the network settings due to <u>static IP changes</u> or <u>replacement of the ROS control PC</u>.<br/>
 >> As mentioned above, a valuable debugging tool is your operating system's <u>ping</u> command. If nothing appears to happen or an error is thrown, the robot cannot be accessed from your computer. Please go back to the top of this chapter and re-operate in the order of instructions.<br/>
@@ -113,7 +126,7 @@ The __Listen node__: a socket server can be established and be connected with RO
 
 ## __3. TMflow Vision node setup and prerequisites for using TM ROS Vision__
 > The __Vision node__ provides the creation of a plane with fixed-point type, servo type, and object type as well as a variety of AOI identification functions.
-> TM ROS Driver can receive the source image from the vision job (with External Detection) and publish it as a ROS topic.<br/> 
+> TM ROS Driver can receive the source image from the vision job (with External Detection) and publish it as a ROS topic.<br/>
 > The following describes how the user can acquire image data through TMvision&trade; of TM Robot. **(Built-in Vision System)**
 
 ### &sect; __Prerequisites for using TM ROS Vision__
@@ -151,18 +164,26 @@ The __Listen node__: a socket server can be established and be connected with RO
 
 >
 > 1. Create a _Vision task_ project of __TMflow__ software, drag the __Vision node__  from  the __Node List__ menu (&rArr; Process &rArr; Vision) onto the project flow and then click the "__+__" to add your Vision Job, as shown below.<br/>
-> <img src="./figures/vision_task.png" width="530" height="360"> <img src="./figures/vision_task_2.png" width="530" height="360">
+<br/>
+
+  <img src="./figures/vision_task.png" width="500" height="360"> <img src="./figures/vision_task_2.png" width="500" height="360">
 >
 > 2. Select the __AOI-only__ and Click __Next__ while editing the vision job type. Set up the proper initial position and camera parameters.<br/>
-> <img src="./figures/AOIonly.png" width="1000" height="500">
+<br/>
+
+  <img src="./figures/AOIonly.png" width="1000" height="500">
 > Note: TMflow software version changes may have slightly different settings. ([SW2.14_Rev1.00](https://www.tm-robot.com/zh-hant/wpfd_file/software-manual-tmflow_sw2-14_rev1-00_en/))<br/>
 >
 > 3. Click __Find__ &rArr; __External Detection__, which adds an _External Detection_ node to the Vision Job flow.
-> <img src="./figures/find_external_detection.png" width="1000" height="500">
+<br/>
+
+  <img src="./figures/find_external_detection.png" width="1000" height="500">
 >
 > 4. To set up _External Detection_, please enter `` http://127.0.0.1:6189/api `` in the __HTTP Setting__ blank text and click the __Send__ button. If normal, the text box will receive a message in JSON format as shown below. Then, enter `` http://127.0.0.1:6189/api/DET `` in the URL blank text and type arbitrary letters in the __Value__ blank text; the __Key__ will be generated automatically. Assign a name to the model in the __Model name__ blank text and click the __Save__ button.
 >
-> <img src="./figures/ExtDetect_setting.png" width="1000" height="500">
+<br/>
+
+  <img src="./figures/ExtDetect_setting.png" width="1000" height="500">
 >
 > 5. Don't forget to press the Play/Pause Button on the Robot Stick to start running this _Vision task_ project.
 >
@@ -197,7 +218,9 @@ The __Listen node__: a socket server can be established and be connected with RO
 >
 > &#10148; Run the embedded ROS driver
 > Mouse-click to enable the `Slave Setup` setting and wait for the status: &rArr; __`Running`__. 
-> <img src="./figures/driver_running.png" width="1100" height="500">
+<br/>
+
+  <img src="./figures/driver_running.png" width="1000" height="500">
 > &#10148; Stop running the embedded ROS driver
 > Mouse-click the toggle button again and the status will show `NotRun`.
 <div> </div>

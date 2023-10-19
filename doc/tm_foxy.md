@@ -16,14 +16,18 @@ The __Listen node__: a socket server can be established and be connected with RO
 >
 > 1. Create a _Listen task_ of flow project of __TMflow__ software, and then drag the __Listen node__ from the __Node List__ menu (&rArr; Communication &rArr; Listen) onto the project flow, as shown below.
 >
-> <img src="./figures/listen_task.png" width="1100" height="500">
+<br/>
+
+   <img src="./figures/listen_task.png" width="1000" height="500">
 >
 >
 > 2. Set the `Network` settings: mouse-click to enter the page of __System &rArr; Network__ in order.  
 > &#10148; Example: Set the Subnet mask: 255.255.255.0 and IP address 192.168.10.2  
 >> **Note**: Set the network mask and the communication with the TM Robot must be in the set domain.  
 >
-> <img src="./figures/network_setting.png" width="1100" height="500">
+<br/>
+
+   <img src="./figures/network_setting.png" width="1000" height="500">
 >
 >
 > 3. Set the __Ethernet Slave__ `Data Table Setting` item: mouse-click to enter the page of __Setting &rArr; Connection &rArr; Ethernet Slave__ in order.  
@@ -60,7 +64,9 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 >
 >    <sup>2</sup> <u>Turn off</u> Ethernet Slave. Let "STATUS:   __Disable__" displayed on the Ethernet Slave setting page, then click `Data Table Setting` to enter the next page for related settings.  
 >
-> <img src="./figures/manual_set_specified_transmit_file.png" width="1100" height="360">
+<br/>
+
+   <img src="./figures/manual_set_specified_transmit_file.png" width="1000" height="360">
 >
 >    <sup>3</sup> The checked items listed above must <u>all</u> be selected for TM2 ROS setting.
 >
@@ -75,7 +81,9 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 > 4. Enable the __Ethernet Slave__ settings: mouse-click to enable or disable TM Ethernet Slave. Once enabled, the robot establishes a Socket server to send the robot status and data to the connected clients and permissions to access specific robot data.<br/>
 > Mouse-click to enable the `Ethernet Slave` setting and let `STATUS:` &rArr; __`Enable`__. 
 >
-> <img src="./figures/status_enable.png" width="550" height="360"><img src="./figures/occupied_by_ros.png" width="550" height="360">
+<br/>
+
+   <img src="./figures/status_enable.png" width="500" height="360"><img src="./figures/occupied_by_ros.png" width="500" height="360">
 >
 >> **Note**: If the user encounters the "Occupied by ROS" lock state as shown in the upper right picture, please go to Configuration &rArr; ROS Setting to unlock it (by turning off __`Slave Setup`__ let the setup __`ROS Driver Status`__ changed from Running to __NotRun__).
 >
@@ -87,14 +95,22 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 > Static IP of remote connection network settings through the wired network.<br/> 
 >
 > 1. Set the wired network of the user's (remote) Ubuntu computer by mouse-click on the top right of the desktop &rArr; Click on "__Wired Settings__" &rArr; Click on the gear icon &rArr; In the IPv4 feature options, click on "Manual" in order.<br/> 
-> <img src="./figures/user_remote_network_settings.png" width="1000" height="500">
+<br/>
+
+   <img src="./figures/user_remote_network_settings.png" width="1000" height="500">
 > <br/>
 > 2. Set the Static IP settings: where the IP address is fixed for the first three yards same as the previous setting 192.168.10, last yards 3-254 machine numbers are available. (Because _TM ROBOT_, you have been set to 192.168.10.2)<br/> 
 > &#10148;  Example: Set the Netmask: 255.255.255.0 and IP address 192.168.10.30 <br/>
-> <img src="./figures/user_remote_IP_example.png" width="1000" height="500">
+<br/>
+
+   <img src="./figures/user_remote_IP_example.png" width="1000" height="500">
 > <br/>
 > 3. Check Internet connection: start a terminal to test the connectivity with the target host _TM ROBOT_, by typing ping 192.168.10.2
-> ![ping_target_host](./figures/ping_target_host.png)
+>
+<br/>
+
+   ![ping_target_host](./figures/ping_target_host.png)
+
 > <br/>
 >> :bulb: **Tip**: Remember to reconfigure the network settings due to <u>static IP changes</u> or <u>replacement of the ROS control PC</u>.<br/>
 >> As mentioned above, a valuable debugging tool is your operating system's <u>ping</u> command. If nothing appears to happen or an error is thrown, the robot cannot be accessed from your computer. Please go back to the top of this chapter and re-operate in the order of instructions.<br/>
@@ -170,25 +186,37 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 > :bulb: Before going through the following steps, please build the TM ROS Vision driver node on your (remote) computer and then connect this (remote) computer to the local TM Robot computer.
 >
 > 1. Create a _Vision task_ project of __TMflow__ software, drag the __Vision node__  from  the __Node List__ menu (&rArr; Process &rArr; Vision) onto the project flow and then click the "__+__" to add your Vision Job, as shown below.<br/>
-> <img src="./figures/vision_task.png" width="530" height="360"> <img src="./figures/vision_task_2.png" width="530" height="360">
+<br/>
+
+  <img src="./figures/vision_task.png" width="500" height="360"> <img src="./figures/vision_task_2.png" width="500" height="360">
 >
 > 2. Select the __AOI-only__ and Click __Next__ while editing the vision job type. Set up the proper initial position and camera parameters.<br/>
-> <img src="./figures/AOIonly.png" width="1100" height="500">
+<br/>
+
+  <img src="./figures/AOIonly.png" width="1000" height="500">
 > Note: TMflow software version changes may have slightly different settings. ([SW2.14_Rev1.00](https://www.tm-robot.com/zh-hant/wpfd_file/software-manual-tmflow_sw2-14_rev1-00_en/))<br/>
 >
 > 3. Click __Find__ &rArr; __External Detection__, which adds an _External Detection_ node to the Vision Job flow.
-> <img src="./figures/find_external_detection.png" width="1100" height="500">
+<br/>
+
+  <img src="./figures/find_external_detection.png" width="1000" height="500">
 >
 > 4. To check whether the connection succeeds or not, please enter ``<user_pc_ip_address>:6189/api`` in the __HTTP Setting__ blank text and click the __Send__ button to get the information of the (remote) computer for ROS.<br/>
 > The `<user_pc_ip_address>` means the IP address of the user's (remote) ROS computer, for example, 192.168.10.12<br/>
 > If normal, the text box will receive a message in JSON format as shown below.<br/>
-> <img src="./figures/http_set_ok.png" width="1100" height="500">
+<br/>
+
+  <img src="./figures/http_set_ok.png" width="1000" height="500">
 >
 >    If the connection fails, a __TIMEOUT__ error will be displayed in the window. If the IP address of the user's (remote) ROS computer doesn't exist, **ERROR_CODE_7** will be displayed in the window.
-> <img src="./figures/http_set_timeout.png" width="530" height="360"> <img src="./figures/http_set_err.png" width="530" height="360">
+<br/>
+
+  <img src="./figures/http_set_timeout.png" width="500" height="360"> <img src="./figures/http_set_err.png" width="500" height="360">
 >
 > 5. Enter ``<user_pc_ip_address>:6189/api/DET`` in the URL blank text and type arbitrary letters in the __Value__ blank text; the __Key__ will be generated automatically. Assign a name to the model in the __Model name__ blank text and click the __Save__ button.
-> <img src="./figures/connection_save_ok.png" width="1100" height="500">
+<br/>
+
+  <img src="./figures/connection_save_ok.png" width="1000" height="500">
 >
 > 6. Don't forget to press the Play/Pause Button on the Robot Stick to start running this _Vision task_ project.
 >

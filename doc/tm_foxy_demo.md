@@ -56,18 +56,22 @@ In this demo code, the user can use send_script service sending a script to leav
 
 ## &sect; Prerequisites
 > 1. To use this package, make sure your ROS PC is installed correctly.
-> 2. The user has successfully configured the network settings of the TM Robot and the user's pc in the same subnet. In other words, users have been able to ping the remote system on the same subnet successfully.
+> 2. The user has successfully configured the network settings of the TM Robot and the user's PC in the same subnet. In other words, users have been able to ping the remote system on the same subnet successfully.
 >>:bulb: Tip:  For example, set the user computer IP address and remote TM Robot to 192.168.10.30 and 192.168.10.2 (Netmask: 255.255.255.0). Users can ping the remote IP address 192.168.10.2, by typing "ping 192.168.10.2".<br>
 >
-> <img src="./figures/ping_target_host.png" width="1000" height="220">
+<br/>
+
+  <img src="./figures/ping_target_host.png" width="1000" height="220">
 >
 > 3. The user already knows how to use _TMflow 2_ programming, especially to configure TM ROS _Ethernet Slave_ "Data Table Setting" and the Listen nodes programming through a flow project. In other words, the user has created and completed the Listen task with the TM ROS setting of a TMflow software process project.
 >>:bulb: Tip: The user can refer to the chapter introduced in the main text: _3. TM ROS driver usage and installation_ for quick and easy setup or refer to the _Software Manual TMflow_ for details.
 >
 > 4. Remember to press the Play/Pause (&#9658;) button on the Robot Stick to start running this Listen task project under auto Mode.
->>:bulb: Tip: If under Manual Mode, it requires the trigger of the _Enabling Switch_ function. Therefore, the user needs to press and hold the __Enabling Switch__ button slightly and continuously to press the Play/Pause (&#9658;) button to run the operation. The user can select to suspend _Enabling Switch_ on UI of _TMflow_ &rArr;  Configuration &rArr; Safety, and the triggering effect of _Enabling Switch_ will be disabled. For details of the _Enabling Switch_ function, refer to the relevant contents in the _Safety Manual_ or the _Software Manual TMflow_.
+>>:bulb: Tip: If under Manual Mode, it requires the trigger of the _Enabling Switch_ function. Therefore, the user needs to press and hold the __Enabling Switch__ button slightly and continuously to press the Play/Pause (&#9658;) button to run the operation. The user can select to suspend _Enabling Switch_ on the UI of _TMflow_ &rArr;  Configuration &rArr; Safety, and the triggering effect of _Enabling Switch_ will be disabled. For details of the _Enabling Switch_ function, refer to the relevant contents in the _Safety Manual_ or the _Software Manual TMflow_.
 >
-> <img src="./figures/suspend_enabling switch_on.png" width="1000" height="320">
+<br/>
+
+  <img src="./figures/suspend_enabling switch_on.png" width="1000" height="320">
 >
 
 ## &sect; Usage with demo code & driver on the external Linux PC
