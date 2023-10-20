@@ -23,8 +23,8 @@ The __Listen node__: a socket server can be established and be connected with RO
 
 ><br/>
 > 2. Set the `Network` settings: mouse-click to enter the page of __System &rArr; Network__ in order.  
-> &#10148; Example: Set the Subnet mask: 255.255.255.0 and IP address 192.168.10.2  
->> **Note**: Set the network mask and the communication with the TM Robot must be in the set domain.  
+> &#10148; Example: Set the Subnet mask: 255.255.255.0 and IP address 192.168.10.2 <br/> 
+>> **Note**: Set the network mask and the communication with the TM Robot must be in the set domain.<br/> 
 > 
 <br/>
 
@@ -105,6 +105,7 @@ The __Listen node__: a socket server can be established and be connected with RO
    ![ping_target_host](./figures/ping_target_host.png)
 
 ><br/>
+>> <br/>
 >> :bulb: **Tip**: Remember to reconfigure the network settings due to <u>static IP changes</u> or <u>replacement of the ROS control PC</u>.<br/>
 >> As mentioned above, a valuable debugging tool is your operating system's <u>ping</u> command. If nothing appears to happen or an error is thrown, the robot cannot be accessed from your computer. Please go back to the top of this chapter and re-operate in the order of instructions.<br/>
 >> If you are an experienced user, you may just need to <u>turn off</u> &rArr; <u>turn on</u> the gear icon of "__Wired Settings__" on your computer or to <u>turn off</u> &rArr; <u>turn on</u> the "__Ethernet Slave Data Table__" setting of the robot to reconfigure the hardware settings.<br/>
@@ -123,6 +124,8 @@ The __Listen node__: a socket server can be established and be connected with RO
 > export ROS_DOMAIN_ID=<ROS_DOMAIN_ID>
 > source ./install/setup.bash
 > ```
+><br/>
+>> <br/>
 >> **Note**: Domain ID is the key to ROS communication, and please make sure the ROS node works under the ROS environment setup with the same Domain ID as the robot.
 >
 > &#10146; <sup>1</sup>  The user can download the [Embedded TM ROS basic App](https://www.tm-robot.com/en/download-center/#3100-4745-wpfd-embedded-tm-ros-driver
@@ -179,8 +182,8 @@ The __Listen node__: a socket server can be established and be connected with RO
 
   <img src="./figures/AOIonly.png" width="1000" height="500">
 
-><br/> 
-> Note: TMflow software version changes may have slightly different settings. ([SW2.14_Rev1.00](https://www.tm-robot.com/zh-hant/wpfd_file/software-manual-tmflow_sw2-14_rev1-00_en/))<br/>
+><br/>
+> Note: TMflow software version changes may have slightly different settings.([SW2.14_Rev1.00](https://www.tm-robot.com/zh-hant/wpfd_file/software-manual-tmflow_sw2-14_rev1-00_en/))<br/>
 >
 > 3. Click __Find__ &rArr; __External Detection__, which adds an _External Detection_ node to the Vision Job flow.
 <br/>

@@ -73,7 +73,8 @@ For example:
    <img src="./figures/quickview.png" width="1000" height="460">
 
 ><br/>
->>:bulb: Tip: If the TM ROS Driver is unavailable in the network, all labels will be displayed as "NaN".
->
+>><br/>
+>>:bulb: Tip: If the TM ROS Driver is unavailable in the network, all labels will be displayed as "NaN".<br/>
+><br/>
 <div> </div>
 

@@ -22,17 +22,17 @@ The __Listen node__: a socket server can be established and be connected with RO
 
 ><br/>
 > 2. Set the `Network` settings: mouse-click to enter the page of __System &rArr; Network__ in order.  
-> &#10148; Example: Set the Subnet mask: 255.255.255.0 and IP address 192.168.10.2  
->> **Note**: Set the network mask and the communication with the TM Robot must be in the set domain.  
+> &#10148; Example: Set the Subnet mask: 255.255.255.0 and IP address 192.168.10.2 <br/> 
+>> **Note**: Set the network mask and the communication with the TM Robot must be in the set domain.<br/> 
 > 
 <br/>
 
    <img src="./figures/network_setting.png" width="1000" height="500">
 
 ><br/>
-> 3. Set the __Ethernet Slave__ `Data Table Setting` item: mouse-click to enter the page of __Setting &rArr; Connection &rArr; Ethernet Slave__ in order.  
-> &#10148;  We recommend _one easy method_ <sup>1</sup> to set the __Ethernet Slave__ `Data Table setting` to directly import the software package.  
- <sup>1</sup> See [TM ROS Driver vs TMflow Software Usage: Import Data Table Setting](https://github.com/TechmanRobotInc/TM_Export).  
+> 3. Set the __Ethernet Slave__ `Data Table Setting` item: mouse-click to enter the page of __Setting &rArr; Connection &rArr; Ethernet Slave__ in order.<br/>  
+> &#10148;  We recommend _one easy method_ <sup>1</sup> to set the __Ethernet Slave__ `Data Table setting` to directly import the software package.<br/>  
+> <sup>1</sup> See [TM ROS Driver vs TMflow Software Usage: Import Data Table Setting](https://github.com/TechmanRobotInc/TM_Export).<br/>   
 >
 > A previous traditional method as follows:  (Note: TMflow software version changes may have slightly different settings.)  
 The user can manually click the `Data Table Setting` <sup>2</sup> item and check the following boxes as item _predefined_ <sup>3</sup> to receive/send specific data: 
@@ -87,7 +87,8 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
    <img src="./figures/status_enable.png" width="500" height="360"><img src="./figures/occupied_by_ros.png" width="500" height="360">
 
 ><br/>
->> **Note**: If the user encounters the "Occupied by ROS" lock state as shown in the upper right picture, please go to Configuration &rArr; ROS Setting to unlock it (by turning off __`Slave Setup`__ let the setup __`ROS Driver Status`__ changed from Running to __NotRun__).
+>><br/>
+>> **Note**: If the user encounters the "Occupied by ROS" lock state as shown in the upper right picture, please go to Configuration &rArr; ROS Setting to unlock it (by turning off __`Slave Setup`__ let the setup __`ROS Driver Status`__ changed from Running to __NotRun__).<br/>
 >
 > 5. Don't forget to press the Play/Pause Button on the Robot Stick to start running this _Listen task_ project.
 >
@@ -116,6 +117,7 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
    ![ping_target_host](./figures/ping_target_host.png)
 
 ><br/>
+>> <br/>
 >> :bulb: **Tip**: Remember to reconfigure the network settings due to <u>static IP changes</u> or <u>replacement of the ROS control PC</u>.<br/>
 >> As mentioned above, a valuable debugging tool is your operating system's <u>ping</u> command. If nothing appears to happen or an error is thrown, the robot cannot be accessed from your computer. Please go back to the top of this chapter and re-operate in the order of instructions.<br/>
 >> If you are an experienced user, you may just need to <u>turn off</u> &rArr; <u>turn on</u> the gear icon of "__Wired Settings__" on your computer or to <u>turn off</u> &rArr; <u>turn on</u> the "__Ethernet Slave Data Table__" setting of the robot to reconfigure the hardware settings.<br/>
@@ -124,8 +126,8 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 
 ###  &sect; Common usage of TM ROS driver 
 > __ROS2 driver usage__ through the Listen Node<br/>
-> :bulb: Do you prepare the __TM Robot__ ready ? Make sure that TM Robot's operating software (__TMflow__) network settings are ready and the __Listen node__ is running. Do you build TM relative ROS apps <sup>1</sup> on your (remote) computer?
-> After the user has set up the ROS2 environment (example : [Debian packages for ROS 2 Foxy](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html)) and built the TM driver relative ROS apps <sup>1</sup> based on the specific workspace, please enter your workspace `<workspace>` by launching the terminal, and remember to make the workspace visible to ROS. 
+> :bulb: Do you prepare the __TM Robot__ ready ? Make sure that TM Robot's operating software (__TMflow__) network settings are ready and the __Listen node__ is running. Do you build TM relative ROS apps <sup>1</sup> on your (remote) computer?<br/>
+> After the user has set up the ROS2 environment (example : [Debian packages for ROS 2 Foxy](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html)) and built the TM driver relative ROS apps <sup>1</sup> based on the specific workspace, please enter your workspace `<workspace>` by launching the terminal, and remember to make the workspace visible to ROS.<br/> 
 >
 > ```bash
 > source /opt/ros/foxy/setup.bash
@@ -200,8 +202,8 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 
   <img src="./figures/AOIonly.png" width="1000" height="500">
 
-><br/> 
-> Note: TMflow software version changes may have slightly different settings. ([SW2.14_Rev1.00](https://www.tm-robot.com/zh-hant/wpfd_file/software-manual-tmflow_sw2-14_rev1-00_en/))<br/>
+><br/>
+> Note: TMflow software version changes may have slightly different settings.([SW2.14_Rev1.00](https://www.tm-robot.com/zh-hant/wpfd_file/software-manual-tmflow_sw2-14_rev1-00_en/))<br/>
 >
 > 3. Click __Find__ &rArr; __External Detection__, which adds an _External Detection_ node to the Vision Job flow.
 <br/>
