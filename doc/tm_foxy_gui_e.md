@@ -25,7 +25,6 @@ This chapter describes a simplified GUI for displaying tm_driver connection stat
 
    <img src="./figures/ping_target_host.png" width="1000" height="220">
 
-><br/>
 > 3. The user already knows how to use _TMflow 2_ programming, especially to configure TM ROS _Ethernet Slave_ "Data Table Setting" and the Listen nodes programming through a flow project. In other words, the user has created and completed the Listen task with the TM ROS setting of a TMflow software process project.
 >>:bulb: Tip: The user can refer to the chapter introduced in the main text: _3. TM ROS driver usage and installation_ for quick and easy setup or refer to the _Software Manual TMflow_ for details.
 >
@@ -36,7 +35,7 @@ This chapter describes a simplified GUI for displaying tm_driver connection stat
 
    <img src="./figures/suspend_enabling switch_on.png" width="1000" height="320">
 
-><br/>
+
 
 ## &sect; Usage with GUI debugging on the external Linux PC
 > 1. Type to create a root workspace directory by starting a terminal: For example,  ``tm2_ws`` or ``catkin_ws``, then type to change the current directory into the workspace directory path.<br/>
@@ -72,9 +71,6 @@ For example:
 
    <img src="./figures/quickview.png" width="1000" height="460">
 
-><br/>
->><br/>
->>:bulb: Tip: If the TM ROS Driver is unavailable in the network, all labels will be displayed as "NaN".<br/>
-><br/>
+>>:bulb: Tip: If the TM ROS Driver is unavailable in the network, all labels will be displayed as "NaN".
 <div> </div>
 

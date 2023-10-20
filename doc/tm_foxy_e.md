@@ -21,7 +21,6 @@ The __Listen node__: a socket server can be established and be connected with RO
 
    <img src="./figures/listen_task.png" width="1000" height="500">
 
-><br/>
 > 2. Set the `Network` settings: mouse-click to enter the page of __System &rArr; Network__ in order.  
 > &#10148; Example: Set the Subnet mask: 255.255.255.0 and IP address 192.168.10.2 <br/> 
 >> **Note**: Set the network mask and the communication with the TM Robot must be in the set domain.<br/> 
@@ -30,14 +29,12 @@ The __Listen node__: a socket server can be established and be connected with RO
 
    <img src="./figures/network_setting.png" width="1000" height="500">
 
-><br/>
 > 3. The __Ethernet Slave__ and `Data Table Setting` are no setup required. As the "__Configuration &rArr; ROS Setting__" is __Running__, the <u>build-in ROS Data Table Setting</u> will be automatically selected (as shown in the figure below, occupied by ROS). 
 > 
 <br/>
 
    <img src="./figures/occupied_by_ros.png" width="1000" height="500">
 
-><br/>
 >
 >> The user can skip this step as follows: The following is only an introduction to the parameters of the ROS data table.
 >
@@ -90,22 +87,18 @@ The __Listen node__: a socket server can be established and be connected with RO
 
    <img src="./figures/user_remote_network_settings.png" width="1000" height="500">
 
-><br/> 
 > 2. Set the Static IP settings: where the IP address is fixed for the first three yards same as the previous setting 192.168.10, last yards 3-254 machine numbers are available. (Because _TM ROBOT_, you have been set to 192.168.10.2)<br/> 
 > &#10148;  Example: Set the Netmask: 255.255.255.0 and IP address 192.168.10.30 <br/>
 <br/>
 
    <img src="./figures/user_remote_IP_example.png" width="1000" height="500">
 
-><br/>
 > 3. Check Internet connection: start a terminal to test the connectivity with the target host _TM ROBOT_, by typing ping 192.168.10.2
 > 
 <br/>
 
    ![ping_target_host](./figures/ping_target_host.png)
 
-><br/>
->> <br/>
 >> :bulb: **Tip**: Remember to reconfigure the network settings due to <u>static IP changes</u> or <u>replacement of the ROS control PC</u>.<br/>
 >> As mentioned above, a valuable debugging tool is your operating system's <u>ping</u> command. If nothing appears to happen or an error is thrown, the robot cannot be accessed from your computer. Please go back to the top of this chapter and re-operate in the order of instructions.<br/>
 >> If you are an experienced user, you may just need to <u>turn off</u> &rArr; <u>turn on</u> the gear icon of "__Wired Settings__" on your computer or to <u>turn off</u> &rArr; <u>turn on</u> the "__Ethernet Slave Data Table__" setting of the robot to reconfigure the hardware settings.<br/>
@@ -124,8 +117,6 @@ The __Listen node__: a socket server can be established and be connected with RO
 > export ROS_DOMAIN_ID=<ROS_DOMAIN_ID>
 > source ./install/setup.bash
 > ```
-><br/>
->> <br/>
 >> **Note**: Domain ID is the key to ROS communication, and please make sure the ROS node works under the ROS environment setup with the same Domain ID as the robot.
 >
 > &#10146; <sup>1</sup>  The user can download the [Embedded TM ROS basic App](https://www.tm-robot.com/en/download-center/#3100-4745-wpfd-embedded-tm-ros-driver
@@ -176,28 +167,24 @@ The __Listen node__: a socket server can be established and be connected with RO
 
   <img src="./figures/vision_task.png" width="500" height="360"> <img src="./figures/vision_task_2.png" width="500" height="360">
 
-><br/>
 > 2. Select the __AOI-only__ and Click __Next__ while editing the vision job type. Set up the proper initial position and camera parameters.<br/>
 <br/>
 
   <img src="./figures/AOIonly.png" width="1000" height="500">
 
-><br/>
-> Note: TMflow software version changes may have slightly different settings.([SW2.14_Rev1.00](https://www.tm-robot.com/zh-hant/wpfd_file/software-manual-tmflow_sw2-14_rev1-00_en/))<br/>
+> Note: TMflow software version changes may have slightly different settings([SW2.14_Rev1.00](https://www.tm-robot.com/zh-hant/wpfd_file/software-manual-tmflow_sw2-14_rev1-00_en/)).<br/>
 >
 > 3. Click __Find__ &rArr; __External Detection__, which adds an _External Detection_ node to the Vision Job flow.
 <br/>
 
   <img src="./figures/find_external_detection.png" width="1000" height="500">
 
-><br/>
 > 4. To set up _External Detection_, please enter `` http://127.0.0.1:6189/api `` in the __HTTP Setting__ blank text and click the __Send__ button. If normal, the text box will receive a message in JSON format as shown below. Then, enter `` http://127.0.0.1:6189/api/DET `` in the URL blank text and type arbitrary letters in the __Value__ blank text; the __Key__ will be generated automatically. Assign a name to the model in the __Model name__ blank text and click the __Save__ button.
 >
 <br/>
 
   <img src="./figures/ExtDetect_setting.png" width="1000" height="500">
 
-><br/>
 > 5. Don't forget to press the Play/Pause Button on the Robot Stick to start running this _Vision task_ project.
 >
 >    Note: For more about __External Detection__, please refer to Software Manual TMvision([SW2.14_Rev1.00](https://www.tm-robot.com/zh-hant/wpfd_file/software-manual-tmvision_sw2-14_rev1-00_en/)).<br/>
@@ -235,7 +222,6 @@ The __Listen node__: a socket server can be established and be connected with RO
 
   <img src="./figures/driver_running.png" width="1000" height="500">
 
-><br/>
 > &#10148; Stop running the embedded ROS driver
 > Mouse-click the toggle button again and the status will show `NotRun`.
 <div> </div>
