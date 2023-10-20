@@ -19,17 +19,19 @@ The __Listen node__: a socket server can be established and be connected with RO
 <br/>
 
    <img src="./figures/listen_task.png" width="1000" height="500">
->
->
+<br/>
+> 
+> 
 > 2. Set the `Network` settings: mouse-click to enter the page of __System &rArr; Network__ in order.  
 > &#10148; Example: Set the Subnet mask: 255.255.255.0 and IP address 192.168.10.2  
 >> **Note**: Set the network mask and the communication with the TM Robot must be in the set domain.  
->
+> 
 <br/>
 
    <img src="./figures/network_setting.png" width="1000" height="500">
->
->
+<br/>
+> 
+> 
 > 3. Set the __Ethernet Slave__ `Data Table Setting` item: mouse-click to enter the page of __Setting &rArr; Connection &rArr; Ethernet Slave__ in order.  
 > &#10148;  We recommend _one easy method_ <sup>1</sup> to set the __Ethernet Slave__ `Data Table setting` to directly import the software package.  
  <sup>1</sup> See [TM ROS Driver vs TMflow Software Usage: Import Data Table Setting](https://github.com/TechmanRobotInc/TM_Export).  
@@ -67,7 +69,8 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 <br/>
 
    <img src="./figures/manual_set_specified_transmit_file.png" width="1000" height="360">
->
+<br/>
+> 
 >    <sup>3</sup> The checked items listed above must <u>all</u> be selected for TM2 ROS setting.
 >
 >    When you need to check more about the __maximum, minimum, and average calculation properties of joint torque__ <sup>4</sup> listed below, these _three checked items_ can be checked individually or all of them, please leave them unchecked when not in use.
@@ -84,7 +87,8 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 <br/>
 
    <img src="./figures/status_enable.png" width="500" height="360"><img src="./figures/occupied_by_ros.png" width="500" height="360">
->
+<br/>
+> 
 >> **Note**: If the user encounters the "Occupied by ROS" lock state as shown in the upper right picture, please go to Configuration &rArr; ROS Setting to unlock it (by turning off __`Slave Setup`__ let the setup __`ROS Driver Status`__ changed from Running to __NotRun__).
 >
 > 5. Don't forget to press the Play/Pause Button on the Robot Stick to start running this _Listen task_ project.
@@ -104,14 +108,16 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 <br/>
 
    <img src="./figures/user_remote_IP_example.png" width="1000" height="500">
-> <br/>
+<br/>
+> 
 > 3. Check Internet connection: start a terminal to test the connectivity with the target host _TM ROBOT_, by typing ping 192.168.10.2
->
+> 
 <br/>
 
    ![ping_target_host](./figures/ping_target_host.png)
 
-> <br/>
+<br/>
+> 
 >> :bulb: **Tip**: Remember to reconfigure the network settings due to <u>static IP changes</u> or <u>replacement of the ROS control PC</u>.<br/>
 >> As mentioned above, a valuable debugging tool is your operating system's <u>ping</u> command. If nothing appears to happen or an error is thrown, the robot cannot be accessed from your computer. Please go back to the top of this chapter and re-operate in the order of instructions.<br/>
 >> If you are an experienced user, you may just need to <u>turn off</u> &rArr; <u>turn on</u> the gear icon of "__Wired Settings__" on your computer or to <u>turn off</u> &rArr; <u>turn on</u> the "__Ethernet Slave Data Table__" setting of the robot to reconfigure the hardware settings.<br/>
@@ -194,30 +200,36 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 <br/>
 
   <img src="./figures/AOIonly.png" width="1000" height="500">
+<br/>
+> 
 > Note: TMflow software version changes may have slightly different settings. ([SW2.14_Rev1.00](https://www.tm-robot.com/zh-hant/wpfd_file/software-manual-tmflow_sw2-14_rev1-00_en/))<br/>
 >
 > 3. Click __Find__ &rArr; __External Detection__, which adds an _External Detection_ node to the Vision Job flow.
 <br/>
 
   <img src="./figures/find_external_detection.png" width="1000" height="500">
->
+<br/>
+> 
 > 4. To check whether the connection succeeds or not, please enter ``<user_pc_ip_address>:6189/api`` in the __HTTP Setting__ blank text and click the __Send__ button to get the information of the (remote) computer for ROS.<br/>
 > The `<user_pc_ip_address>` means the IP address of the user's (remote) ROS computer, for example, 192.168.10.12<br/>
 > If normal, the text box will receive a message in JSON format as shown below.<br/>
 <br/>
 
   <img src="./figures/http_set_ok.png" width="1000" height="500">
->
+<br/>
+> 
 >    If the connection fails, a __TIMEOUT__ error will be displayed in the window. If the IP address of the user's (remote) ROS computer doesn't exist, **ERROR_CODE_7** will be displayed in the window.
 <br/>
 
   <img src="./figures/http_set_timeout.png" width="500" height="360"> <img src="./figures/http_set_err.png" width="500" height="360">
->
+<br/>
+> 
 > 5. Enter ``<user_pc_ip_address>:6189/api/DET`` in the URL blank text and type arbitrary letters in the __Value__ blank text; the __Key__ will be generated automatically. Assign a name to the model in the __Model name__ blank text and click the __Save__ button.
 <br/>
 
   <img src="./figures/connection_save_ok.png" width="1000" height="500">
->
+<br/>
+> 
 > 6. Don't forget to press the Play/Pause Button on the Robot Stick to start running this _Vision task_ project.
 >
 >    Note: For more about __External Detection__, please refer to Software Manual TMvision([SW2.14_Rev1.00](https://www.tm-robot.com/zh-hant/wpfd_file/software-manual-tmvision_sw2-14_rev1-00_en/)).<br/>
