@@ -62,7 +62,8 @@ In this demo code, the user can use send_script service sending a script to leav
 <br/>
 
   <img src="./figures/ping_target_host.png" width="1000" height="220">
-<br/>
+
+><br/>
 > 3. The user already knows how to use _TMflow 2_ programming, especially to configure TM ROS _Ethernet Slave_ "Data Table Setting" and the Listen nodes programming through a flow project. In other words, the user has created and completed the Listen task with the TM ROS setting of a TMflow software process project.
 >>:bulb: Tip: The user can refer to the chapter introduced in the main text: _3. TM ROS driver usage and installation_ for quick and easy setup or refer to the _Software Manual TMflow_ for details.
 >
@@ -72,7 +73,8 @@ In this demo code, the user can use send_script service sending a script to leav
 <br/>
 
   <img src="./figures/suspend_enabling switch_on.png" width="1000" height="320">
-<br/>
+
+><br/>
 
 ## &sect; Usage with demo code & driver on the external Linux PC
 > Note: If the user has even successfully built a specific code(tm2_ros2), the user only needs to change to the TM driver workspace path  ``cd ~/tm2_ws``, and then directly refer to steps 5~6 below. <br/>
