@@ -21,9 +21,7 @@ The __Listen node__: a socket server can be established and be connected with RO
 
    <img src="./figures/listen_task.png" width="1000" height="500">
 
-<br/>
-><br/>  
-> 
+><br/>
 > 2. Set the `Network` settings: mouse-click to enter the page of __System &rArr; Network__ in order.  
 > &#10148; Example: Set the Subnet mask: 255.255.255.0 and IP address 192.168.10.2  
 >> **Note**: Set the network mask and the communication with the TM Robot must be in the set domain.  
@@ -32,9 +30,7 @@ The __Listen node__: a socket server can be established and be connected with RO
 
    <img src="./figures/network_setting.png" width="1000" height="500">
 
-<br/>
-><br/>  
-> 
+><br/>
 > 3. The __Ethernet Slave__ and `Data Table Setting` are no setup required. As the "__Configuration &rArr; ROS Setting__" is __Running__, the <u>build-in ROS Data Table Setting</u> will be automatically selected (as shown in the figure below, occupied by ROS). 
 > 
 <br/>
@@ -129,7 +125,7 @@ The __Listen node__: a socket server can be established and be connected with RO
 > ```
 >> **Note**: Domain ID is the key to ROS communication, and please make sure the ROS node works under the ROS environment setup with the same Domain ID as the robot.
 >
-&#10146; <sup>1</sup>  The user can download the [Embedded TM ROS basic App](https://www.tm-robot.com/en/download-center/#3100-4745-wpfd-embedded-tm-ros-driver
+> &#10146; <sup>1</sup>  The user can download the [Embedded TM ROS basic App](https://www.tm-robot.com/en/download-center/#3100-4745-wpfd-embedded-tm-ros-driver
 ) packages from Techman Download Center for the basic TM ROS application or clone the [Experimental TM2 Foxy ROS Apps](https://github.com/TechmanRobotInc/tm2_ros2) of the GitHub repository for more advanced ROS applications.
 <div> </div>
 

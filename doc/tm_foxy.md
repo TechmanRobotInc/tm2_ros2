@@ -20,9 +20,7 @@ The __Listen node__: a socket server can be established and be connected with RO
 
    <img src="./figures/listen_task.png" width="1000" height="500">
 
-<br/>
-><br/>  
-> 
+><br/>
 > 2. Set the `Network` settings: mouse-click to enter the page of __System &rArr; Network__ in order.  
 > &#10148; Example: Set the Subnet mask: 255.255.255.0 and IP address 192.168.10.2  
 >> **Note**: Set the network mask and the communication with the TM Robot must be in the set domain.  
@@ -31,9 +29,7 @@ The __Listen node__: a socket server can be established and be connected with RO
 
    <img src="./figures/network_setting.png" width="1000" height="500">
 
-<br/>
-><br/>  
-> 
+><br/>
 > 3. Set the __Ethernet Slave__ `Data Table Setting` item: mouse-click to enter the page of __Setting &rArr; Connection &rArr; Ethernet Slave__ in order.  
 > &#10148;  We recommend _one easy method_ <sup>1</sup> to set the __Ethernet Slave__ `Data Table setting` to directly import the software package.  
  <sup>1</sup> See [TM ROS Driver vs TMflow Software Usage: Import Data Table Setting](https://github.com/TechmanRobotInc/TM_Export).  
@@ -72,8 +68,7 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 
    <img src="./figures/manual_set_specified_transmit_file.png" width="1000" height="360">
 
-<br/>
-><br/>  
+><br/>
 >    <sup>3</sup> The checked items listed above must <u>all</u> be selected for TM2 ROS setting.
 >
 >    When you need to check more about the __maximum, minimum, and average calculation properties of joint torque__ <sup>4</sup> listed below, these _three checked items_ can be checked individually or all of them, please leave them unchecked when not in use.
@@ -91,8 +86,7 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 
    <img src="./figures/status_enable.png" width="500" height="360"><img src="./figures/occupied_by_ros.png" width="500" height="360">
 
-<br/>
-><br/> 
+><br/>
 >> **Note**: If the user encounters the "Occupied by ROS" lock state as shown in the upper right picture, please go to Configuration &rArr; ROS Setting to unlock it (by turning off __`Slave Setup`__ let the setup __`ROS Driver Status`__ changed from Running to __NotRun__).
 >
 > 5. Don't forget to press the Play/Pause Button on the Robot Stick to start running this _Listen task_ project.
@@ -147,7 +141,7 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 >
 > Now, the user can use a new terminal to run each ROS node or command but don't forget to source the correct setup shell files as starting a new terminal.
 >
-&#10146; <sup>1</sup>  The user can download the TM driver relative ROS apps [Experimental TM2 Foxy ROS Apps](https://github.com/TechmanRobotInc/tm2_ros2) of the GitHub repository for ROS applications.
+> &#10146; <sup>1</sup>  The user can download the TM driver relative ROS apps [Experimental TM2 Foxy ROS Apps](https://github.com/TechmanRobotInc/tm2_ros2) of the GitHub repository for ROS applications.
 <div> </div>
 
 ## __3. TMflow Vision node setup and prerequisites for using TM ROS Vision__

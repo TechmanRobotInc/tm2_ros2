@@ -63,6 +63,8 @@ The <robot_ip_address> is the IP address of the TM Robot, the user can get it th
 <br/>
 
    <img src="./figures/quickview.png" width="1000" height="460">
+
+><br/>
 >>:bulb: Tip: If the TM ROS Driver is unavailable in the network, all labels will be displayed as "NaN".
 >
 <div> </div>
