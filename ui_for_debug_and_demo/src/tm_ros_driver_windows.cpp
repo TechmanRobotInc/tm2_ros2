@@ -8,8 +8,6 @@
 ** Implementation [MainWindow]
 *****************************************************************************/
 void MainWindow::initial_ui_component(){
-  //connect(ui->set_sct_re_connect_button, SIGNAL(clicked()),this,SLOT(click_set_sct_re_connect_button()));
-  //connect(ui->set_svr_re_connect_button, SIGNAL(clicked()),this,SLOT(click_set_svr_re_connect_button()));
   connect(ui->change_control_box_io_button, SIGNAL(clicked()),this,SLOT(click_change_control_box_io_button()));
   connect(ui->clear_response_button, SIGNAL(clicked()),this,SLOT(click_clear_response_button()));
   connect(ui->Close, SIGNAL(clicked()),this,SLOT(quit()));
@@ -24,7 +22,6 @@ void MainWindow::initial_ros_thread_to_ui_page(){
   connect(rosPage.get(), SIGNAL(send_to_ui_list(std::string)), this, SLOT(send_to_ui_list(std::string)));
 }
 void MainWindow::set_text_nan_initial(QLabel* label){
-  //label->setAlignment(Qt::AlignCenter);
   QFont f("Arial",14);
   f.setWeight(600);  
   label->setFont(f);
@@ -170,10 +167,8 @@ void MainWindow::send_ui_feed_back_status(tm_msgs::msg::FeedbackState::SharedPtr
     int_base_format_change(msg->project_speed,ui->project_speed_label,10);
     if(msg->error_code == 0){
         set_text_true_false(msg->error_code,ui->error_code_status_label,true);    
-        //set_text_null_reserve(true,ui->error_content_status_label);
     } else{ 
         int_base_format_change(msg->error_code,ui->error_code_status_label,16);
-        //set_text_null_reserve(false,ui->error_content_status_label);
     }
     if(msg->cb_digital_output.size() > 0){
       if(msg->cb_digital_output[0] == 0){
@@ -195,20 +190,6 @@ void MainWindow::send_ui_feed_back_status(tm_msgs::msg::FeedbackState::SharedPtr
     int_base_format_change(msg->max_not_connect_in_s,ui->maxlosttime_status_label,10);
   }
 }
-/*
-void MainWindow::click_set_sct_re_connect_button(){
-  RCLCPP_DEBUG_STREAM(rclcpp::get_logger("rclcpp"), "click [SctClient Re-Connect] button");  
-  initial_link_ctrl_label();
-  initial_status_ctrl_label();
-  send_sct_as_re_connect();
-}
-void MainWindow::click_set_svr_re_connect_button(){
-  RCLCPP_DEBUG_STREAM(rclcpp::get_logger("rclcpp"), "click [SvrClient Re-Connect] button");	
-  initial_link_ctrl_label();
-  initial_status_ctrl_label();
-  send_svr_as_re_connect();
-}
-*/
 void MainWindow::click_change_control_box_io_button(){
   RCLCPP_DEBUG_STREAM(rclcpp::get_logger("rclcpp"), "click [DO0 Ctrl] button");
   change_control_box_io_button();

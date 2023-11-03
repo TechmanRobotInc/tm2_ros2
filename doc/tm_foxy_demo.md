@@ -28,7 +28,7 @@ arg0 &rarr;  if func is TAG or WAIT_TAG, arg0 is the tag number<br/>
 arg1 &rarr;  if func is TAG or WAIT_TAG, arg1 is timeout in ms<br/>
 >
 > * demo_set_io:<br/>
-In this demo code, the user should set the module, type, pin and state. <sup>4</sup> <br/>
+In this demo code, the user should set the module, type, pin, and state. <sup>4</sup> <br/>
 module &rarr;  MODULE_CONTROLBOX or MODULE_ENDEFFECTOR<br/>
 type &rarr;  TYPE_DIGITAL_IN, TYPE_DIGITAL_OUT, TYPE_INSTANT_DO, TYPE_ANALOG_IN, TYPE_ANALOG_OUT, TYPE_INSTANT_AO<br/>
 pin &rarr;  pin number<br/>

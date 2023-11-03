@@ -67,8 +67,6 @@ signals:
   void send_to_ui_list(std::string);
   
 private slots:
-  //void send_sct_as_re_connect();
-  //void send_svr_as_re_connect();
   void change_control_box_io_button();
   
 };
@@ -102,15 +100,11 @@ private:
   QString format_change(std::string msg);
   
 signals:
-  //void send_sct_as_re_connect();
-  //void send_svr_as_re_connect();
   void change_control_box_io_button();
 
 private slots:
   void send_ui_feed_back_status(tm_msgs::msg::FeedbackState::SharedPtr msg);
   void send_to_ui_list(std::string);
-  //void click_set_sct_re_connect_button();
-  //void click_set_svr_re_connect_button();
   void click_change_control_box_io_button();
   void click_clear_response_button();
   void quit();  
