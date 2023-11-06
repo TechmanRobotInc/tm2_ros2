@@ -200,8 +200,6 @@ void MainWindow::quit()
   QApplication::quit();
 }
 void MainWindow::initial_ui_page_to_ros_thread(){
-  //connect(this, SIGNAL(send_sct_as_re_connect()),rosPage.get(),SLOT(send_sct_as_re_connect()));
-  //connect(this, SIGNAL(send_svr_as_re_connect()),rosPage.get(),SLOT(send_svr_as_re_connect()));
   connect(this, SIGNAL(change_control_box_io_button()),rosPage.get(),SLOT(change_control_box_io_button()));
 }
 void MainWindow::send_to_ui_list(std::string showMessage){

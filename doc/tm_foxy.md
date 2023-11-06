@@ -172,7 +172,7 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 >
 > ```bash
 > cd ~/<workspace> && source ./install/setup.bash
-> ros2 run tm_get_status image_talker
+> ros2 run tm_image image_talker
 > ```
 >
 > :bulb: The user can check whether the connection succeeds or not. When you proceed to the following steps introduced in the following text: step1 &rArr; step5 of § TMflow Vision node setup.
