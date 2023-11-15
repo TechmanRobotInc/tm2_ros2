@@ -76,17 +76,17 @@ If the user wants to know how to use the TM ROS driver, please visit the TM ROS 
     </tr>
     <tr>
         <td><a href="https://docs.ros.org/en/humble/index.html">ROS 2 Humble Hawksbill</a></td>
-        <td>  </td>
-        <th> preparing </th>
-        <th> preparing </th>
+        <td><a href="https://github.com/TechmanRobotInc/tm2_ros2/tree/humble">TM2 ROS2 Humble</a></td>
+        <th>&#9711;</th>
+        <th>&#9711;</th>
         <th>DDS FastRTPS</th>
     </tr>
 </table>
 
-&#10148; Example: If your ROS PC is installed with ROS 2 Foxy Fitzroy, see [TM2 ROS2 Foxy](https://github.com/TechmanRobotInc/tm2_ros2) and then select how you want to use the TM ROS driver.<br/>
+&#10148; Example: If your ROS PC is installed with ROS 2 Humble Hawksbill, see [TM2 ROS2 Humble](https://github.com/TechmanRobotInc/tm2_ros2/tree/humble) and then select how you want to use the TM ROS driver.<br/>
 
-- External TM ROS Driver [Usage Guideline](./doc/tm_foxy.md)
-- Embedded TM ROS Driver [Usage Guideline](./doc/tm_foxy_e.md)
+- External TM ROS Driver [Usage Guideline](./doc/tm_humble.md)
+- Embedded TM ROS Driver [Usage Guideline](./doc/tm_humble_e.md)
 
 **Note**: To use the driver, make sure your ROS PC is installed correctly.
 > :bookmark_tabs: Note1: Using the embedded TM ROS driver can only communicate with ROS 2 applications that use eProsima FastDDS as their RMW layer. If the user needs different RMW layers for other applications, such as RMW_IMPLMENTATION=rmw_cyclonedds_cpp, please choose the installation method using the external TM ROS driver.<br/>
@@ -97,16 +97,16 @@ If the user wants to know how to use the TM ROS driver, please visit the TM ROS 
 
 ## __4. TM Program Script Demonstration__
 This chapter describes the demo package and the code used as a C++ programming example, showing how to program robot scripts (TM Robot Expressions) through the TM ROS driver connection.
-- External TM ROS Driver [Usage Guideline](./doc/tm_foxy_demo.md)
-- Embedded TM ROS Driver [Usage Guideline](./doc/tm_foxy_demo_e.md)
+- External TM ROS Driver [Usage Guideline](./doc/tm_humble_demo.md)
+- Embedded TM ROS Driver [Usage Guideline](./doc/tm_humble_demo_e.md)
 
 **Note**: See the demo code [`demo_send_script`](./demo/src/demo_send_script.cpp) as an example.
 <div> </div>
 
 ## __5. TM External GUI debugging and Demonstration__
-This chapter describes a simplified GUI for displaying tm_driver connection status, sct, sta, svr messages, and robot status. The user can optionally install the _ui_for_debug_and_demo_ package to aid in viewing messages between the driver and the robot through the GUI display. If the driver connection fails, the user can also try to send a reconnect command on this GUI for debugging.
-- External TM ROS Driver [Usage Guideline](./doc/tm_foxy_gui.md)
-- Embedded TM ROS Driver [Usage Guideline](./doc/tm_foxy_gui_e.md)
+This chapter describes a simplified GUI for displaying tm_driver connection status, sct, sta, svr messages, and robot status. The user can optionally install the _tm_inspect_ package to aid in viewing messages between the driver and the robot through the GUI display.
+- External TM ROS Driver [Usage Guideline](./doc/tm_humble_gui.md)
+- Embedded TM ROS Driver [Usage Guideline](./doc/tm_humble_gui_e.md)
 <div> </div>
 
 ## __6. Contact us / Technical support__

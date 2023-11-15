@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.16.3)
 project(image_sub)
 
 # Default to C99
@@ -6,9 +6,10 @@ if(NOT CMAKE_C_STANDARD)
   set(CMAKE_C_STANDARD 99)
 endif()
 
-# Default to C++14
+# Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 17)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -37,11 +38,11 @@ endif()
 
 add_executable(sub_img src/sub_img.cpp)
 ament_target_dependencies(sub_img
-"rclcpp"
-"sensor_msgs"
-"std_msgs"
-"OpenCV"
-"ament_index_cpp"
+  "rclcpp"
+  "sensor_msgs"
+  "std_msgs"
+  "OpenCV"
+  "ament_index_cpp"
 )
 
 install(TARGETS
@@ -53,4 +54,5 @@ install(
   DIRECTORY image
   DESTINATION share/${PROJECT_NAME}
 )
+
 ament_package()

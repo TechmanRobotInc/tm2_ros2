@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.16.3)
 project(demo)
 
 # Default to C99
@@ -6,9 +6,10 @@ if(NOT CMAKE_C_STANDARD)
   set(CMAKE_C_STANDARD 99)
 endif()
 
-# Default to C++14
+# Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 17)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -56,7 +57,7 @@ install(TARGETS
 )
 
 add_executable(demo_ask_sta
-  src/demo_ask_sta.cpp 
+  src/demo_ask_sta.cpp
 )
 
 ament_target_dependencies(demo_ask_sta
@@ -72,7 +73,7 @@ demo_ask_sta
 )
 
 add_executable(demo_connect_tm
-  src/demo_connect_tm.cpp 
+  src/demo_connect_tm.cpp
 )
 
 ament_target_dependencies(demo_connect_tm
@@ -88,7 +89,7 @@ install(TARGETS
 )
 
 add_executable(demo_set_event
-  src/demo_set_event.cpp 
+  src/demo_set_event.cpp
 )
 
 ament_target_dependencies(demo_set_event
@@ -104,7 +105,7 @@ install(TARGETS
 )
 
 add_executable(demo_set_io
-  src/demo_set_io.cpp 
+  src/demo_set_io.cpp
 )
 
 ament_target_dependencies(demo_set_io
@@ -120,7 +121,7 @@ install(TARGETS
 )
 
 add_executable(demo_set_positions # robot does'nt move
-  src/demo_set_positions.cpp 
+  src/demo_set_positions.cpp
 )
 
 ament_target_dependencies(demo_set_positions
@@ -136,7 +137,7 @@ install(TARGETS
 )
 
 add_executable(demo_write_item
-  src/demo_write_item.cpp 
+  src/demo_write_item.cpp
 )
 
 ament_target_dependencies(demo_write_item
@@ -152,7 +153,7 @@ install(TARGETS
 )
 
 add_executable(demo_ask_item
-  src/demo_ask_item.cpp 
+  src/demo_ask_item.cpp
 )
 
 ament_target_dependencies(demo_ask_item
@@ -168,7 +169,7 @@ install(TARGETS
 )
 
 add_executable(demo_get_feedback
-  get_status_demo_src/demo_get_feedback.cpp 
+  get_status_demo_src/demo_get_feedback.cpp
 )
 
 ament_target_dependencies(demo_get_feedback
@@ -184,7 +185,7 @@ install(TARGETS
 )
 
 add_executable(demo_get_torque_feedback
-  get_status_demo_src/demo_get_torque_feedback.cpp 
+  get_status_demo_src/demo_get_torque_feedback.cpp
 )
 
 ament_target_dependencies(demo_get_torque_feedback
@@ -200,7 +201,7 @@ install(TARGETS
 )
 
 add_executable(demo_get_sct_response
-  get_status_demo_src/demo_get_sct_response.cpp 
+  get_status_demo_src/demo_get_sct_response.cpp
 )
 
 ament_target_dependencies(demo_get_sct_response
@@ -216,7 +217,7 @@ install(TARGETS
 )
 
 add_executable(demo_get_sta_response
-  get_status_demo_src/demo_get_sta_response.cpp 
+  get_status_demo_src/demo_get_sta_response.cpp
 )
 
 ament_target_dependencies(demo_get_sta_response
@@ -232,7 +233,7 @@ install(TARGETS
 )
 
 add_executable(demo_get_svr_response
-  get_status_demo_src/demo_get_svr_response.cpp 
+  get_status_demo_src/demo_get_svr_response.cpp
 )
 
 ament_target_dependencies(demo_get_svr_response
@@ -247,7 +248,7 @@ install(TARGETS
   DESTINATION lib/${PROJECT_NAME}
 )
 add_executable(demo_leave_listen_node
-  src/demo_leave_listen_node.cpp 
+  src/demo_leave_listen_node.cpp
 )
 
 ament_target_dependencies(demo_leave_listen_node

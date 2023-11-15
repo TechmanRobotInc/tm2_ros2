@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.5)
+cmake_minimum_required(VERSION 3.16.3)
 project(tm_driver)
 
 # Default to C99
@@ -6,9 +6,10 @@ if(NOT CMAKE_C_STANDARD)
   set(CMAKE_C_STANDARD 99)
 endif()
 
-# Default to C++14
+# Default to C++17
 if(NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
+  set(CMAKE_CXX_STANDARD 17)
+  set(CMAKE_CXX_STANDARD_REQUIRED ON)
 endif()
 
 if(CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
@@ -31,6 +32,7 @@ find_package(rclcpp REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(sensor_msgs REQUIRED)
 find_package(tm_msgs REQUIRED)
+find_package(tf2_geometry_msgs REQUIRED)
 set(moveit2_lib_auto_judge true)
 if (moveit2_lib_auto_judge)
   find_package(moveit_ros_planning_interface QUIET)
@@ -92,6 +94,7 @@ if (moveit2_lib_auto_judge)
       std_msgs
       sensor_msgs
       tm_msgs
+      tf2_geometry_msgs
       trajectory_msgs
       control_msgs
       rclcpp_action
@@ -118,6 +121,7 @@ if (moveit2_lib_auto_judge)
       std_msgs
       sensor_msgs
       tm_msgs
+      tf2_geometry_msgs
     )
   endif (moveit_ros_planning_interface_FOUND)
 else()
@@ -142,6 +146,7 @@ else()
     std_msgs
     sensor_msgs
     tm_msgs
+    tf2_geometry_msgs
   )
 endif()
   
