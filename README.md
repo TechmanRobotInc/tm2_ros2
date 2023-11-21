@@ -76,9 +76,9 @@ If the user wants to know how to use the TM ROS driver, please visit the TM ROS 
     </tr>
     <tr>
         <td><a href="https://docs.ros.org/en/humble/index.html">ROS 2 Humble Hawksbill</a></td>
-        <td>  </td>
-        <th> preparing </th>
-        <th> preparing </th>
+        <td><a href="https://github.com/TechmanRobotInc/tm2_ros2/tree/humble">TM2 ROS2 Humble</a></td>
+        <th>&#9711;</th>
+        <th>&#9711;</th>
         <th>DDS FastRTPS</th>
     </tr>
 </table>
