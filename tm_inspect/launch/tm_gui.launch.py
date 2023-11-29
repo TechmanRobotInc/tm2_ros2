@@ -3,7 +3,7 @@ from launch import LaunchDescription
 from launch_ros.actions import Node
 
 #launch_arguments: expected format '<name>:=<value>', you can type robot_ip:=<ip value> or ip:=<ip value>  .
-#example: ros2 launch ui_for_debug_and_demo tm_gui.launch.py robot_ip:=192.168.10.2
+#example: ros2 launch tm_inspect tm_gui.launch.py robot_ip:=192.168.10.2
 
 def generate_launch_description():
     args = []
@@ -15,8 +15,8 @@ def generate_launch_description():
             i = i + 1
 
     # gui_demo executable
-    ui_for_debug_and_demo_node = Node(
-        package='ui_for_debug_and_demo',
+    tm_inspect_node = Node(
+        package='tm_inspect',
         executable='robot_ui',
         output='screen',
         #The five different verbosity levels are, in order: DEBUG, INFO, WARN, ERROR, FATAL      
@@ -33,4 +33,4 @@ def generate_launch_description():
         #arguments=[args, '--ros-args', '--log-level', 'DEBUG'],
     )
 	
-    return LaunchDescription([ui_for_debug_and_demo_node,tm_driver_node])
+    return LaunchDescription([tm_inspect_node,tm_driver_node])

@@ -37,11 +37,11 @@ endif()
 
 add_executable(sub_img src/sub_img.cpp)
 ament_target_dependencies(sub_img
-"rclcpp"
-"sensor_msgs"
-"std_msgs"
-"OpenCV"
-"ament_index_cpp"
+  "rclcpp"
+  "sensor_msgs"
+  "std_msgs"
+  "OpenCV"
+  "ament_index_cpp"
 )
 
 install(TARGETS
@@ -53,4 +53,5 @@ install(
   DIRECTORY image
   DESTINATION share/${PROJECT_NAME}
 )
+
 ament_package()

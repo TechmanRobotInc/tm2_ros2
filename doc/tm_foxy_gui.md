@@ -1,5 +1,5 @@
 # __TM External GUI debugging and Demonstration__
-This chapter describes a simplified GUI for displaying tm_driver connection status, sct, sta, svr messages, and robot status. The user can optionally install the _ui_for_debug_and_demo_ package to aid in viewing messages between the driver and the robot through the GUI display.
+This chapter describes a simplified GUI for displaying tm_driver connection status, sct, sta, svr messages, and robot status. The user can optionally install the _tm_inspect_ package to aid in viewing messages between the driver and the robot through the GUI display.
 
 ## &sect; GUI Debugging description
 > * If the user forgets to run the TM ROS driver, the user will see all the controlled label items of the GUI displayed as "NaN".<br/>
@@ -56,7 +56,7 @@ This chapter describes a simplified GUI for displaying tm_driver connection stat
 The <robot_ip_address> is the IP address of the TM Robot, the user can get it through TM Flow, for example, 192.168.10.2<br/>
 > 6. In another new terminal: Source setup.bash in the workspace path and start GUI debug by typing<br/>
 ``source ./install/setup.bash``<br/>
-``ros2 run ui_for_debug_and_demo robot_ui``<br/>
+``ros2 run tm_inspect robot_ui``<br/>
 >
 >
 <br/>

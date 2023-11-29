@@ -104,7 +104,7 @@ This chapter describes the demo package and the code used as a C++ programming e
 <div> </div>
 
 ## __5. TM External GUI debugging and Demonstration__
-This chapter describes a simplified GUI for displaying tm_driver connection status, sct, sta, svr messages, and robot status. The user can optionally install the _ui_for_debug_and_demo_ package to aid in viewing messages between the driver and the robot through the GUI display. If the driver connection fails, the user can also try to send a reconnect command on this GUI for debugging.
+This chapter describes a simplified GUI for displaying tm_driver connection status, sct, sta, svr messages, and robot status. The user can optionally install the _tm_inspect_ package to aid in viewing messages between the driver and the robot through the GUI display.
 - External TM ROS Driver [Usage Guideline](./doc/tm_foxy_gui.md)
 - Embedded TM ROS Driver [Usage Guideline](./doc/tm_foxy_gui_e.md)
 <div> </div>

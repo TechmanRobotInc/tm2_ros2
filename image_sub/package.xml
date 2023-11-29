@@ -4,11 +4,11 @@
   <name>image_sub</name>
   <version>2.0.0</version>
   <description>image subscription</description>
-  <maintainer email="leo.wu@tm-robot.com">leowu</maintainer>
-  <maintainer email="yh.wang@tm-robot.com">Yh Wang</maintainer>  
-  <license>BSD</license>
 
-  <buildtool_depend>ament_cmake</buildtool_depend>
+  <maintainer email="leo.wu@tm-robot.com">leo wu</maintainer>
+  <maintainer email="yh.wang@tm-robot.com">Yh Wang</maintainer>
+
+  <license>BSD</license>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   <build_depend>libopencv-dev</build_depend>
