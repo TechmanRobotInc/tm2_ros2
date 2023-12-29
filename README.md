@@ -68,6 +68,13 @@ If the user wants to know how to use the TM ROS driver, please visit the TM ROS 
         <th>Embedded TM ROS Driver</th>
     </tr>
     <tr>
+        <td><a href="http://wiki.ros.org/noetic">ROS Noetic Ninjemys</a></td>
+        <td><a href="https://github.com/TechmanRobotInc/tm2_ros1">TM2 ROS1 Noetic</a></td>
+        <th>&#9711;</th>
+        <th>&#9711;</th>
+        <th>&#10005;&nbsp</th>
+    </tr>
+    <tr>
         <td><a href="https://index.ros.org/doc/ros2/Releases/Release-Foxy-Fitzroy/">ROS 2 Foxy Fitzroy</a></td>
         <td><a href="https://github.com/TechmanRobotInc/tm2_ros2">TM2 ROS2 Foxy</a></td>
         <th>&#9711;</th>
