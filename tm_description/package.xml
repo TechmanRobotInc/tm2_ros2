@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>tm_description</name>
+  <version>2.0.0</version>
+  <description>
+    URDF description for the TM AI Cobot S-Series
+  </description>
+
+  <author email="ken.tsai@tm-robot.com">Ken Tsai</author>
+  <maintainer email="ken.tsai@tm-robot.com">Ken Tsai</maintainer>
+  <maintainer email="yh.wang@tm-robot.com">Yh Wang</maintainer>
+
+  <license>BSD 3-clause</license>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <exec_depend>joint_state_publisher</exec_depend>
+  <exec_depend>launch</exec_depend>
+  <exec_depend>launch_ros</exec_depend>
+  <exec_depend>robot_state_publisher</exec_depend>
+  <exec_depend>rviz2</exec_depend>
+  <exec_depend>xacro</exec_depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
