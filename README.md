@@ -116,6 +116,16 @@ This chapter describes a simplified GUI for displaying tm_driver connection stat
 - Embedded TM ROS Driver [Usage Guideline](./doc/tm_humble_gui_e.md)
 <div> </div>
 
-## __6. Contact us / Technical support__
+## __6. Generate your TM Robot-Specific Kinematics Parameters Files__
+Real kinematic values vary from TM robot to another one as each robot is calibrated at the factory.<br/>
+This chapter describes that the user can use a script program to extract specific kinematic values from your TM robot. The Python script function automatically generates a new URDF robot file that has XML macros in it (i.e. a new Xacro robot file) using a specific set of commands.
+- External TM ROS Driver [Usage Guideline](./doc/tm_humble_description.md)
+- Embedded TM ROS Driver [Usage Guideline](./doc/tm_humble_description_e.md)
+
+**Note 1**: If the user just want to use the TM Robot nominal model to control the robot, the user can skip the rest of this chapter.<br/>
+**Note 2**: The tm_description package contains description files and meshes, available for the TM12S model, and some Cobot models will be added later.
+<div> </div>
+
+## __7. Contact us / Technical support__
 More Support & Service, please contact us. [@TECHMAN ROBOT](https://www.tm-robot.com/zh-hant/contact-us/)``[https://www.tm-robot.com/zh-hant/contact-us/] ``<br/>
 <div> </div>

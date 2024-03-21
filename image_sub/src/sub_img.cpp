@@ -60,10 +60,10 @@ void SubImg::get_new_image_callback(sensor_msgs::msg::Image::SharedPtr msg){
     std::cout << "Width : " << frame.size().width << std::endl;
     std::cout << "Height: " << frame.size().height << std::endl;
     frame.copyTo(this->image);
-    std::cout<<"after set this->image = frame";
+    std::cout<<"after setting this->image = frame";
   }
   catch(std::runtime_error &exception){
-    std::cout<<"there is a exception "<< exception.what()<< std::endl;
+    std::cout<<"there is an exception "<< exception.what()<< std::endl;
   }
 }
 
