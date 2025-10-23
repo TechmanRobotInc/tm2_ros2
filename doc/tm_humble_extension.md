@@ -78,11 +78,11 @@
 > The prefix `<tm_robot_type>` means the TM Robot type, available for tm5s, tm7s, tm12s, tm14s, tm25s, tm30s, and (without the integrated camera) tm5sx, tm7sx, tm12sx, tm14sx, tm25sx, and tm30sx models.
 >>
 >> :bulb: If you have started some executable programs with ROS commands in some terminal windows, it is recommended that you close them and then execute the following commands.<br/>
->> Taking the TM12S robot as an example, use the commands introduced above, by typing
+>> Taking the TM12S robot as an example, use the commands introduced above, by typing<br/>
 ``source ./install/setup.bash``<br/>
-``ros2 launch tm12s_moveit_config tm12s_run_move_group.launch.py``
+``ros2 launch tm12s_moveit_config tm12s_run_move_group.launch.py``<br/>
 >>
-><br/>
+>
 > * The user can also manipulate the real TM Robot to run, by typing<br/>
 >
 > ```bash
@@ -93,7 +93,7 @@
 > :warning:[CAUTION] This demo will let the real TM Robot move, please be careful. If the user are a beginner or unfamiliar with the arm movement path, it is recommended that the user place your hand on the big red emergency _Stick Stop Button_ at any time, and press the button appropriately in the event of any accident that may occur.<br/>
 >>
 >> :bulb: If you have started some executable programs with ROS commands in some terminal windows, it is recommended that you close them and then execute the following commands.<br/>
->> Taking the TM12S robot as an example (if the IP address is 192.168.10.2), use the commands introduced above, by typing
+>> Taking the TM12S robot as an example (if the IP address is 192.168.10.2), use the commands introduced above, by typing<br/>
 ``source ./install/setup.bash``<br/>
 ``ros2 launch tm12s_moveit_config tm12s_run_move_group.launch.py robot_ip:=192.168.10.2``
 >
@@ -105,15 +105,15 @@
 ## &sect; Usage with Gazebo Simulation 
 >
 > See [Gazebo tutorial](https://gazebosim.org/docs/fortress/install_ubuntu/) to install the Gazebo Fortress (formerly Ignition) libraries.<br/>
-> Then, use the following command to install these ROS2 Gazebo dependency packages
+> Then, use the following command to install these ROS2 Gazebo dependency packages<br/>
 `` sudo apt-get install ros-humble-gazebo-ros-pkgs``<br/>
 `` sudo apt-get install ros-humble-ros-gz-sim``<br/>
 `` sudo apt-get install ros-humble-ros-gz``<br/>
 `` sudo apt-get install ros-humble-ign-ros2-control``<br/>
 >
-> A workaround for a single package is to define the environment variable IGN_CONFIG_PATH to point to the location of the Gazebo library installation, where the YAML file for the package is found, such as
+> A workaround for a single package is to define the environment variable IGN_CONFIG_PATH to point to the location of the Gazebo library installation, where the YAML file for the package is found, such as<br/>
 >> export IGN_CONFIG_PATH=/user/local/share/ignition
-> export IGN_GAZEBO_RESOURCE_PATH=<full path to your models directory>
+>> export IGN_GAZEBO_RESOURCE_PATH=<full path to your models directory>
 >>
 > The tm_gazebo package contains the Xacro model files to simulate the TM Robot in Gazebo.
 >
@@ -131,7 +131,7 @@
 >> :bulb: If you have started some executable programs with ROS commands in some terminal windows, it is recommended that you close them and then execute the following commands.<br/>
 >> 1. To open the terminal 1: Running with Gazebo.<br/>
 `` source /opt/ros/humble/setup.bash``<br/>
-``cd <workspace>``<br/>
+`` cd <workspace>``<br/>
 `` source ./install/setup.bash``<br/>
 `` ros2 launch tm_gazebo tm12s_gazebo.launch.py``<br/>
 >> 2. In a new terminal 2: Type to change the current directory into the scripts directory path and execute the send_goal.sh .<br/>
@@ -149,7 +149,7 @@
 > ros2 launch <tm_robot_type>_moveit_config <tm_robot_type>_run_move_group_gz.launch.py sim:=True
 > ```
 >> Taking the TM12S simulated robot as an example, ("sim:=True" is set by default and can be omitted for virtual robot simulation), use the command described above:
->> :bulb: If you have started some executable programs with ROS commands in some terminal windows, it is recommended that you close them and then execute the following commands.
+>> :bulb: If you have started some executable programs with ROS commands in some terminal windows, it is recommended that you close them and then execute the following commands.<br/>
 >> Example: To open the terminal: Running Gazebo with moveit 2<br/>
 ``source ./install/setup.bash``<br/>
 ``ros2 launch tm12s_moveit_config tm12s_run_move_group_gz.launch.py``<br/>
@@ -166,7 +166,7 @@
 > :warning:[CAUTION] This demo will let the real TM Robot move, please be careful. If the user are a beginner or unfamiliar with the arm movement path, it is recommended that the user place your hand on the big red emergency _Stick Stop Button_ at any time, and press the button appropriately in the event of any accident that may occur.<br/>
 >
 >> Taking the TM12S real robot as an example, use the commands introduced above, by typing<br/>
->> :bulb: If you have started some executable programs with ROS commands in some terminal windows, it is recommended that you close them and then execute the following commands.
+>> :bulb: If you have started some executable programs with ROS commands in some terminal windows, it is recommended that you close them and then execute the following commands.<br/>
 >> Example: To open the terminal: Running Gazebo with moveit 2, and if the IP address of the TM Robot is 192.168.10.2<br/>
 ``source ./install/setup.bash``<br/>
 ``ros2 launch tm12s_moveit_config tm12s_run_move_group_gz.launch.py robot_ip:=192.168.10.2 sim:=False``<br/>
@@ -175,7 +175,7 @@
 > :bookmark_tabs: Note1: Remember to close all these executables when you no longer use them for Gazebo simulations.<br/>
 > :bookmark_tabs: Note2: If the GUI Gazebo is not properly shut down after terminating the launch, you can try to kill the corresponding process with the following command.<br/>
 >
->>:bulb: **Tip**: Use __grep__ to view the specified 'ign gazebo' process information.
+>>:bulb: **Tip**: Use __grep__ to view the specified 'ign gazebo' process information.<br/>
 >> ``ps aux | grep ign``<br/>
 >>:bulb: **Tip**: To kill the GUI Gazebo executables.<br/>
 >> ``pkill -f -9 'ign gazebo'``<br/>
