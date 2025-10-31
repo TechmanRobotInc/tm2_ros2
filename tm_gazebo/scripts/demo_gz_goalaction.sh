@@ -27,7 +27,7 @@ echo ign gazebo= $`ign gazebo --versions`
 # terminal2: Run Gazebo GUI Demo
 echo ""
 if timeout 1s gnome-terminal -- bash -c "cd $SCRIPT_DIR && ros2 launch tm_gazebo tm12s_gazebo.launch.py; exec bash" ; then
-    echo "Demo TM12 Robot Model on Gazebo GUI successfully"
+    echo "Demo TM12S Robot Model on Gazebo GUI successfully"
 else
     echo "Fetching timed out, shut down"
     exit 1

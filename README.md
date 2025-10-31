@@ -2,7 +2,7 @@
 
 ## __1. Overview__
 
-Techman Robot is a state-of-the-art production tool that is highly compatible and flexible to collaboration between human and machine. The Robot Operating System (ROS) provides abundant libraries and tools which can be utilized to reduce the cost of trivial development software tool and build robot applications without struggling. Our TM ROS driver provides nodes for communication with Techman Robot controllers, data including robot states, images from the eye-in-hand camera, and URDF models for various robot arms via __TMflow__ <sup>1</sup>. In addition to TM ROS Driver, TM Robot also provides related resources, such as sample programs, GUI tools for debugging, and resource description files required for simulation on MoveIt or Gazebo.
+Techman Robot is a state-of-the-art production tool that is highly compatible and flexible to collaboration between human and machine. The Robot Operating System (ROS) provides abundant libraries and tools which can be utilized to reduce the cost of trivial development software tools and build robot applications without struggling. Our TM ROS driver provides nodes for communication with Techman Robot controllers, data including robot states, images from the eye-in-hand camera, and URDF models for various robot arms via __TMflow__ <sup>1</sup>. In addition to TM ROS Driver, TM Robot also provides related resources, such as sample programs, GUI tools for debugging, and resource description files required for simulation on MoveIt or Gazebo.
 <div> </div>
 This manual applies to TMflow Version 2.14 or above and adapts to HW5.0 mainly.
 
@@ -14,7 +14,7 @@ The TM ROS driver connects to _TMflow Ethernet Slave_ to control _TMflow_ projec
 > To use the driver, make sure your ROS PC is installed correctly.  
 
 &#10146; <sup>1</sup>  __TMflow__ is a graphical human-machine interface (HMI).<br/>
-&#10146; <sup>2</sup>  __Listen Node__: A socket server can be established and be connected by an external device to communicate according to the defined protocol In the _Listen Node_. All the functions available in _Expression Editor_ can also be executed in Listen Node.<br/>
+&#10146; <sup>2</sup>  __Listen Node__: A socket server can be established and connected by an external device to communicate according to the defined protocol in the _Listen Node_. All the functions available in _Expression Editor_ can also be executed in Listen Node.<br/>
 &#10146; <sup>3</sup>  __TMscript__ is the programming language of Techman Robot applicable to Flow projects and Script projects.<br/>
 &#10146; <sup>4</sup>  __Techman Robot Expression__ (defined protocol) is the programming language of Techman Robot applicable to Flow programming projects and Script programming projects.<br/>
 >
@@ -27,7 +27,7 @@ TM ROS Driver consists of three main parts: Topic Publisher, Service Server, and
 > __Topic Publisher__
 >
 > - publish feedback state on _/feedback_states_  
-The FeedbackState includes robot position, error code, and io status, etc.
+The FeedbackState includes robot position, error code, and IO status, etc.
 (see _tm_msgs/msg/FeedbackState.msg_)  
 > - publish joint states on _/joint_states_  
 > - publish tool pose on _/tool_pose_
@@ -37,18 +37,18 @@ The FeedbackState includes robot position, error code, and io status, etc.
 > - _/tm_driver/send_script_ (see _tm_msgs/srv/SendScript.srv_) :  
 send robot script (_TM Robot Expression_) to _Listen Node_  
 > - _/tm_driver/set_event_ (see _tm_msgs/srv/SetEvent.srv_) :  
-send "Stop", "Pause" or "Resume" commands to _Listen Node_  
+Send "Stop", "Pause", or "Resume" commands to _Listen Node_  
 > - _/tm_driver/set_io_ (see _tm_msgs/srv/SetIO.srv_) :  
 send digital or analog output value to _Listen Node_  
 > - _/tm_driver/set_positions (see _tm_msgs/srv/SetPositions.srv_) :  
-send motion command to _Listen Node_, the motion type include PTP_J, PTP_T, LINE_T, the position value is a joint angle(__J__) or Cartesian coordinate(__T__), see [The TM "Expression Editor" manual]
+Send motion command to _Listen Node_, the motion type includes PTP_J, PTP_T, LINE_T, the position value is a joint angle(__J__) or Cartesian coordinate(__T__), see [The TM "Expression Editor" manual]
 >
 > __Action Server__
 >
 > - An action interface on _/follow_joint_trajectory_ for seamless integration with MoveIt
 >
 
-The _Topic Publisher_ connects to _TMflow_ through the Ethernet slave, collects robot-related data, and publishes it as a topic (such as robot states, joint states, end tool pose, etc.), and the customer's ros node can subscribe to these topics to obtain data. The role of the _Service Server_ interface is to control the movement of the robot and provide various movement instructions  _tm_msgs_. When the _TMflow project_ runs to the _Listen Node_, the customer's ros node can issue instructions to the _Listen node_ through the _Service Server_ to drive the robot. The role of the _Action Server_ interface is to translate the trajectory calculated by MoveIt into the movement command of the robot and drive the robot to complete the trajectory.
+The _Topic Publisher_ connects to _TMflow_ through the Ethernet slave, collects robot-related data, and publishes it as a topic (such as robot states, joint states, end tool pose, etc.), and the customer's ROS node can subscribe to these topics to obtain data. The role of the _Service Server_ interface is to control the movement of the robot and provide various movement instructions  _tm_msgs_. When the _TMflow project_ runs to the _Listen Node_, the customer's ROS node can issue instructions to the _Listen node_ through the _Service Server_ to drive the robot. The role of the _Action Server_ interface is to translate the trajectory calculated by MoveIt into the movement command of the robot and drive the robot to complete the trajectory.
 <div> </div>
 
 ## __3. TM ROS Driver Usage and Installation__
@@ -117,24 +117,24 @@ This chapter describes a simplified GUI for displaying tm_driver connection stat
 <div> </div>
 
 ## __6. Generate your TM Robot-Specific Kinematics Parameters Files__
-Real kinematic values vary from TM robot to another one as each robot is calibrated at the factory.<br/>
-This chapter describes that the user can use a script program to extract specific kinematic values from your TM robot. The Python script function automatically generates a new URDF robot file that has XML macros in it (i.e. a new Xacro robot file) using a specific set of commands.
+Real kinematic values vary from one TM robot to another as each robot is calibrated at the factory.<br/>
+This chapter describes how the user can use a script program to extract specific kinematic values from your TM robot. The Python script function automatically generates a new URDF robot file that has XML macros in it (i.e., a new Xacro robot file) using a specific set of commands.
 - [Usage Guideline](./doc/tm_humble_description.md)
 
 > [!TIP]   
-> 1. If the user just want to use the TM Robot nominal model to control the robot, the user can skip the rest of this chapter.<br/>
+> 1. If the user just wants to use the TM Robot nominal model to control the robot, the user can skip the rest of this chapter.<br/>
 > 2. The tm_description package contains description files and meshes, available for TM5S, TM7S, TM12S, TM14S, TM25S, TM30S, and (without the integrated camera) TM5SX, TM7SX, TM12SX, TM14SX, TM25SX, and TM30SX models.<br/>
 <div> </div>
 
 ## __7. Related ROS Projects and Tutorials Usage__
 &#10148; For example, you can try to run __MoveIt__ on the TM robot
-The user can use MoveIt to control the TM robot in the motion planning to plan paths or run the TM Robot simulation into your scene description for operations such as _collision checking_ or _obstacle avoidance_.
+The user can use MoveIt to control the TM robot in the motion planning to plan paths or run the TM Robot simulation in your scene description for operations such as _collision checking_ or _obstacle avoidance_.
 See [MoveIt2 tutorial](https://moveit.ros.org/install-moveit2/binary/) to install the MoveIt2 packages.<br/>
 - [Usage Guideline](./doc/tm_humble_extension.md)
 
 > [!TIP]  
 > 1. Some software packages with ROS2 Humble MoveIt2 configurations for TM Cobots are available for TM5S, TM7S, TM12S, TM14S, TM25S, TM30S, and (without the integrated camera) TM5SX, TM7SX, TM12SX, TM14SX, TM25SX, and TM30SX models.<br/>
-> 2. Some software packages with ROS2 Humble Gazebo Fortress configurations for TM Cobots are available for TM5S, TM7S, TM12S models.<br/>
+> 2. Some software packages with ROS2 Humble Gazebo Fortress configurations for TM Cobots are available for TM5S, TM7S, TM12S, TM14S, TM25S, and TM30S models.<br/>
 <div> </div>
 
 ## __8. Contact us / Technical support__   [![Email](https://img.shields.io/badge/-Email-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:tmsales@tm-robot.com)

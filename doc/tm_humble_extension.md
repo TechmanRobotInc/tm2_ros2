@@ -98,7 +98,7 @@
 ``ros2 launch tm12s_moveit_config tm12s_run_move_group.launch.py robot_ip:=192.168.10.2``
 >
 > Note: When you have finished, press CTRL + C in all terminal windows to shut everything down.<br/>
-> :bookmark_tabs: Note1: There are several built-in TM Robot nominal robot model settings, available for TM5S, TM7S, TM12S, TM14S, TM25S, TM30S and (without the integrated camera) TM5SX, TM7SX, TM12SX, TM14SX, TM25SX, and TM30SX models.<br/>
+> :bookmark_tabs: Note1: There are several built-in TM Robot nominal robot model settings, available for TM5S, TM7S, TM12S, TM14S, TM25S, TM30S, and (without the integrated camera) TM5SX, TM7SX, TM12SX, TM14SX, TM25SX, and TM30SX models.<br/>
 > :bookmark_tabs: Note2: TM Robot set the default to read the Xacro file, such as _TM5S_ model, to read the file _tm5s.urdf.xacro_ into robot_description or such as _TM12S_ model, to read the file _tm12s.urdf.xacro_ into robot_description. If the user wants to use the specific model parameters instead of the nominal model to control the robot, please go back to the section __6. Generate your TM Robot-Specific Kinematics Parameters Files__ to modify the Xacro file.<br/>
 > :bookmark_tabs: Note3: __Running two TM ROS drivers at the same IP address is not allowed.__ Since the tm driver node has been written into the moveit launch file, there is no need to execute _ros2 run tm_driver tm_driver robots_ip:=<robot_ip_address>_.<br/>
 
@@ -125,7 +125,7 @@
 > ros2 launch tm_gazebo <tm_robot_type>_gazebo.launch.py
 > ```
 >
-> The prefix `<tm_robot_type>` means the TM Robot type, available for the tm5s, tm7s, tm12s models.<br/>
+> The prefix `<tm_robot_type>` means the TM Robot type, available for the tm5s, tm7s, tm12s, tm14s, tm25s, and tm30s models.<br/>
 > 
 >> Taking the TM12S robot as an example, use the ros2 action send_goal command line tool to send some FollowJointTrajectory goals to move to several positions.<br/>
 >> :bulb: If you have started some executable programs with ROS commands in some terminal windows, it is recommended that you close them and then execute the following commands.<br/>

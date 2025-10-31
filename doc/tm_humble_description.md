@@ -1,5 +1,5 @@
 # __Generate your TM Robot-Specific Kinematics Parameters Files__
-Real kinematic values vary from TM robot to another one as each robot is calibrated at the factory.<br/>
+Real kinematic values vary from one TM robot to another as each robot is calibrated at the factory.<br/>
 The user can use the tm_mod_urdf package to extract specific kinematic values from your TM robot, which are taken into account by a Python script function using a specific set of commands to automatically generate a new Xacro robot model description file.
 > If the user just wants to use the TM Robot nominal model to control the robot, the user can skip the rest of this chapter.<br/>
 
@@ -14,10 +14,10 @@ The user can use the tm_mod_urdf package to extract specific kinematic values fr
  >```
  > * <script_name> : Provide modify_xacro.py or modify_urdf.py two Python scripts program as options.
  > * <urdf_from>: The first argument represents the original URDF model form of the TM Robot, and the file part naming <sup>1</sup> is <urdf_from>.<br/>
- > <sup>1</sup> There are several built-in TM Robot nominal robot model settings, available for TM5S, TM7S, TM12S, TM14S, TM25S, TM30S, and (without the integrated camera) TM5SX, TM7SX, TM12SX, TM14SX, TM25SX, and TM30SX models.<br/>
+ > <sup>1</sup> There are several built-in TM Robot nominal robot model settings available for TM5S, TM7S, TM12S, TM14S, TM25S, TM30S, and (without the integrated camera) TM5SX, TM7SX, TM12SX, TM14SX, TM25SX, and TM30SX models.<br/>
  > For example, select your real robot type as the input nominal model form. If your TM robot is TM12S, then the user can type tm12s as the <urdf_from>.<br/>
  > * <urdf_gen>: The second argument means the newly generated URDF model form of the TM Robot, and the file <sup>2</sup> name is <urdf_gen>.<br/>
- > <sup>2</sup> For example, if the user names it test and select modify_xacro.py as script program, a test.urdf.xacro robot description file will be generated.<br/>
+ > <sup>2</sup> For example, if the user names it test and selects modify_xacro.py as the script program, a test.urdf.xacro robot description file will be generated.<br/>
  >
  > The Python script for more specific arguments is used as follows:
  >```bash
@@ -30,10 +30,10 @@ The user can use the tm_mod_urdf package to extract specific kinematic values fr
 
 
 ## &sect; Create with specific kinematic parameters of the local TM Robot
-> :bulb: Do you run the driver to maintain the connection with TM Robot, make sure that TM Robot's operating software (TMflow) network settings are ready and the Listen node is running.<br/>
+> :bulb: Do you run the driver to maintain the connection with TM Robot, make sure that TM Robot's operating software (TMflow) network settings are ready, and the Listen node is running.<br/>
 > <br/>
 > * #### __Take generating a new Xacro file as an example__
-> The following steps describe how to import specific kinematic values using a real TM12S Robot following the procedure below, and select the corresponding type tm12s as an example of <urdf_from>.<br/>
+> The following steps describe how to import specific kinematic values using a real TM12S Robot, following the procedure below, and select the corresponding type tm12s as an example of <urdf_from>.<br/>
 >
 > 1. In a terminal: Source setup.bash in the workspace path and run the driver to connect to TM Robot by typing<br/>
 >
@@ -54,7 +54,7 @@ The user can use the tm_mod_urdf package to extract specific kinematic values fr
 > cd src/tm_mod_urdf/tm_mod_urdf
 > python3 modify_xacro.py tm12s user_defined
 > ```
-> When this procedure is completed, the user can find that the newly generated named robot description file has been saved, e.g."``user_defined.urdf.xacro``".<br/>
+> When this procedure is completed, the user can find that the newly generated named robot description file has been saved, e.g.,"``user_defined.urdf.xacro``".<br/>
 > :bookmark_tabs: Note: In the previous chapter, we renamed the download folder tm2_ros2 (or tm2_ros2-master) to src. If the user misses this step, they will encounter such an error "``[Error] [modify_xacro]: workspace directory not find ``" on the screen when executing the above command.<br/>
 > 
 > 3. Next, the user must modify the filename part of the default pre-built nominal robot model in tm12s.urdf.xacro to a newly generated robot model description naming file.<br/>
@@ -78,7 +78,7 @@ The user can use the tm_mod_urdf package to extract specific kinematic values fr
 > ```
 > Finally, the user can launch the modified robot file "``tm12s.urdf.xacro``" to run your TM Robot or simulate the robot more accurately.<br/>
 >> :bulb: **Tip**: Remember to recompile since the code has been changed.<br/>
->> Please go back to your specific workspace. Then you can choose `colcon build --cmake-clean-cache` to rebuild, or you can clean the build, install and log directories with `rm -r build install log` before executing `colcon build`.<br/>
+>> Please go back to your specific workspace. Then you can choose `colcon build --cmake-clean-cache` to rebuild, or you can clean the build, install, and log directories with `rm -r build install log` before executing `colcon build`.<br/>
 >
 >
 ## &sect; Import information available on the screen

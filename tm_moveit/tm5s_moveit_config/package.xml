@@ -4,7 +4,7 @@
   <name>tm5s_moveit_config</name>
   <version>1.0.0</version>
   <description>
-     The configuration and launch files for using the tm7s with the MoveIt Motion Planning Framework
+     The configuration and launch files for using the tm5s with the MoveIt Motion Planning Framework
   </description>
   <maintainer email="yh.wang@tm-robot.com">Yh Wang</maintainer>
 
