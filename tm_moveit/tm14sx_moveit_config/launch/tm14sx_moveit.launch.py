@@ -38,7 +38,6 @@ def load_file(package_name, file_path):
 def generate_launch_description():
     # Declare arguments
     args = []
-    length = len(sys.argv)
     if (len(sys.argv) >= 5):
         i = 4
         while i < len(sys.argv):

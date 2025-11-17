@@ -127,14 +127,14 @@ This chapter describes how the user can use a script program to extract specific
 <div> </div>
 
 ## __7. Related ROS Projects and Tutorials Usage__
-&#10148; For example, you can try to run __MoveIt__ on the TM robot
+&#10148; For example, you can try to run __MoveIt__ on the TM robot<br/>
 The user can use MoveIt to control the TM robot in the motion planning to plan paths or run the TM Robot simulation in your scene description for operations such as _collision checking_ or _obstacle avoidance_.
 See [MoveIt2 tutorial](https://moveit.ros.org/install-moveit2/binary/) to install the MoveIt2 packages.<br/>
 - [Usage Guideline](./doc/tm_humble_extension.md)
 
 > [!TIP]  
 > 1. Some software packages with ROS2 Humble MoveIt2 configurations for TM Cobots are available for TM5S, TM7S, TM12S, TM14S, TM25S, TM30S, and (without the integrated camera) TM5SX, TM7SX, TM12SX, TM14SX, TM25SX, and TM30SX models.<br/>
-> 2. Some software packages with ROS2 Humble Gazebo Fortress configurations for TM Cobots are available for TM5S, TM7S, TM12S, TM14S, TM25S, and TM30S models.<br/>
+> 2. Some software packages with ROS2 Humble Gazebo Fortress configurations for TM Cobots are available for TM5S, TM7S, TM12S, TM14S, TM25S, TM30S, and (without the integrated camera) TM5SX, TM7SX, TM12SX, TM14SX, TM25SX, and TM30SX models.<br/>
 <div> </div>
 
 ## __8. Contact us / Technical support__   [![Email](https://img.shields.io/badge/-Email-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:tmsales@tm-robot.com)

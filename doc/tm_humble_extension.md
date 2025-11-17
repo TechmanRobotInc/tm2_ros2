@@ -125,7 +125,7 @@
 > ros2 launch tm_gazebo <tm_robot_type>_gazebo.launch.py
 > ```
 >
-> The prefix `<tm_robot_type>` means the TM Robot type, available for the tm5s, tm7s, tm12s, tm14s, tm25s, and tm30s models.<br/>
+> The prefix `<tm_robot_type>` means the TM Robot type, available for the tm5s, tm7s, tm12s, tm14s, tm25s, tm30s, and (without the integrated camera) tm5sx, tm7sx, tm12sx, tm14sx, tm25sx, and tm30sx models.<br/>
 > 
 >> Taking the TM12S robot as an example, use the ros2 action send_goal command line tool to send some FollowJointTrajectory goals to move to several positions.<br/>
 >> :bulb: If you have started some executable programs with ROS commands in some terminal windows, it is recommended that you close them and then execute the following commands.<br/>
