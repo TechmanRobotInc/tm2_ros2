@@ -16,12 +16,12 @@
     joint_4_velocity_limit:=${radians(225)}
     joint_5_velocity_limit:=${radians(225)}
     joint_6_velocity_limit:=${radians(450)}
-    joint_1_effort_limit:=${170}
-    joint_2_effort_limit:=${170}
-    joint_3_effort_limit:=${170}
-    joint_4_effort_limit:=${45}
-    joint_5_effort_limit:=${45}
-    joint_6_effort_limit:=${45}
+    joint_1_effort_limit:=${157}
+    joint_2_effort_limit:=${157}
+    joint_3_effort_limit:=${157}
+    joint_4_effort_limit:=${54}
+    joint_5_effort_limit:=${54}
+    joint_6_effort_limit:=${34}
     safety_limits:=false safety_pos_margin:=0.15
     safety_k_position:=20">
 

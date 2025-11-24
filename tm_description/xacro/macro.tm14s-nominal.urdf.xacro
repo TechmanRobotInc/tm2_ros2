@@ -16,12 +16,12 @@
     joint_4_velocity_limit:=${radians(225)}
     joint_5_velocity_limit:=${radians(225)}
     joint_6_velocity_limit:=${radians(450)}
-    joint_1_effort_limit:=${350}
-    joint_2_effort_limit:=${350}
-    joint_3_effort_limit:=${170}
-    joint_4_effort_limit:=${45}
-    joint_5_effort_limit:=${45}
-    joint_6_effort_limit:=${45}
+    joint_1_effort_limit:=${353}
+    joint_2_effort_limit:=${353}
+    joint_3_effort_limit:=${157}
+    joint_4_effort_limit:=${54}
+    joint_5_effort_limit:=${54}
+    joint_6_effort_limit:=${34}
     safety_limits:=false safety_pos_margin:=0.15
     safety_k_position:=20">
 
@@ -98,7 +98,7 @@
         <xacro:tm_material_whitegraphite />
       </xacro:if>
       <xacro:if value="${prefix_monochrome_command}">
-      <material name="${color}" />
+        <material name="${color}" />
       </xacro:if>
     </visual>
     <collision>
@@ -132,7 +132,7 @@
         <xacro:tm_material_darkolive />
       </xacro:if>
       <xacro:if value="${prefix_monochrome_command}">
-      <material name="${color}" />
+        <material name="${color}" />
       </xacro:if>
     </visual>
     <collision>
@@ -167,7 +167,7 @@
         <xacro:tm_material_darkolive />
       </xacro:if>
       <xacro:if value="${prefix_monochrome_command}">
-      <material name="${color}" />
+        <material name="${color}" />
       </xacro:if>
     </visual>
     <collision>
@@ -202,7 +202,7 @@
         <xacro:tm_material_gold />
       </xacro:if>
       <xacro:if value="${prefix_monochrome_command}">
-      <material name="${color}" />
+        <material name="${color}" />
       </xacro:if>
     </visual>
     <collision>
@@ -237,7 +237,7 @@
         <xacro:tm_material_darkolive />
       </xacro:if>
       <xacro:if value="${prefix_monochrome_command}">
-      <material name="${color}" />
+        <material name="${color}" />
       </xacro:if>
     </visual>
     <collision>
@@ -272,7 +272,7 @@
         <xacro:tm_material_darkolive />
       </xacro:if>
       <xacro:if value="${prefix_monochrome_command}">
-      <material name="${color}" />
+        <material name="${color}" />
       </xacro:if>
     </visual>
     <collision>
@@ -307,7 +307,7 @@
         <xacro:tm_material_purewhite />
       </xacro:if>
       <xacro:if value="${prefix_monochrome_command}">
-      <material name="${color}" />
+        <material name="${color}" />
       </xacro:if>
     </visual>
     <collision>
