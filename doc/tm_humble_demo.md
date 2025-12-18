@@ -84,7 +84,7 @@ In this demo code, the user can use send_script service sending a script to leav
 ``git clone https://github.com/TechmanRobotInc/tm2_ros2.git -b humble``<br/>
 > 3. After the download done, rename the download folder ``tm2_ros2``(or ``tm2_ros2-master``) to ``src`` by typing<br/>
 ``mv tm2_ros2 src``<br/>  (or right-click on the download folder, select "Rename...")<br/>
-> 4. At the workspace directory to build the download packages and source 'setup.bash' in this workspace to make the workspace visible to ROS. <br/>
+> 4. At the workspace directory to build the download packages and source 'setup.bash' in this workspace to make the workspace visible to ROS.<br/>
 **Note**: Have you set ``source /opt/ros/humble/setup.bash`` ready? Make sure to obtain the correct setup file according to your workspace hierarchy, and then type the following below to compile.<br/>
 ``colcon build``<br/>
 ``source ./install/setup.bash``<br/>
