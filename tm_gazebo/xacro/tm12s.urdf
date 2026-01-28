@@ -383,7 +383,7 @@
     </gazebo>
   <gazebo>
     <plugin filename="libign_ros2_control-system.so" name="ign_ros2_control::IgnitionROS2ControlPlugin">
-      <parameters>/home/leowu/20250807/install/tm_gazebo/share/tm_gazebo/config/ros2_controllers.yaml</parameters>
+      <parameters>$(find tm_gazebo)/share/tm_gazebo/config/ros2_controllers.yaml</parameters>
       <ros>
         <remapping>/controller_manager/robot_description:=/robot_description</remapping>
       </ros>
