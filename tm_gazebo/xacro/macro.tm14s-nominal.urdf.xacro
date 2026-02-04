@@ -44,10 +44,10 @@
     <!-- Inertia parameters -->
     <xacro:property name="mass_0" value="1.0" />
     <xacro:property name="mass_1" value="8.200" />
-    <xacro:property name="mass_2" value="15.017" />
-    <xacro:property name="mass_3" value="3.329" />
+    <xacro:property name="mass_2" value="14.934" />
+    <xacro:property name="mass_3" value="3.147" />
     <xacro:property name="mass_4" value="1.770" />
-    <xacro:property name="mass_5" value="1.880" />
+    <xacro:property name="mass_5" value="1.770" />
     <xacro:property name="mass_6" value="0.720" />
 
     <xacro:property name="unit_factor" value="0.000001"/>
@@ -59,14 +59,14 @@
     <xacro:property name="ixx_6" value="${703.44734*unit_factor}" />
 
     <xacro:property name="iyy_1" value="${37671.229*unit_factor}" />
-    <xacro:property name="iyy_2" value="${1212610.4*unit_factor}" />
+    <xacro:property name="iyy_2" value="${862789.03*unit_factor}" />
     <xacro:property name="iyy_3" value="${134098.54*unit_factor}" />
     <xacro:property name="iyy_4" value="${3171.8293*unit_factor}" />
     <xacro:property name="iyy_5" value="${3171.8293*unit_factor}" />
     <xacro:property name="iyy_6" value="${1711.0225*unit_factor}" />
-    
+
     <xacro:property name="izz_1" value="${38856.370*unit_factor}" />
-    <xacro:property name="izz_2" value="${1231270.0*unit_factor}" />
+    <xacro:property name="izz_2" value="${881446.87*unit_factor}" />
     <xacro:property name="izz_3" value="${135525.91*unit_factor}" />
     <xacro:property name="izz_4" value="${3478.9518*unit_factor}" />
     <xacro:property name="izz_5" value="${3478.9518*unit_factor}" />
