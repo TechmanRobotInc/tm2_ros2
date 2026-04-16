@@ -41,7 +41,7 @@
 
     <material name="darkolive">
       <color rgba="${color_darkolive}" />
-    </material>		
+    </material>
 
     <material name="pebblegray">
       <color rgba="${color_pebblegray}" />
@@ -143,7 +143,7 @@
   <xacro:macro name="tm_material_pebblegray">
     <material name="">
       <color rgba="${color_pebblegray}" />
-    </material>								
+    </material>
   </xacro:macro>
 
   <xacro:macro name="tm_material_grey">
@@ -162,24 +162,24 @@
     <material name="">
       <color rgba="${color_graywhite}" />
     </material>
-  </xacro:macro>	
+  </xacro:macro>
 
   <xacro:macro name="tm_material_purewhite">
     <material name="">
       <color rgba="${color_purewhite}" />
-    </material>								
+    </material>
   </xacro:macro>
 
   <xacro:macro name="tm_material_white}">
     <material name="">
       <color rgba="${color_white}" />
     </material>
-  </xacro:macro>	
+  </xacro:macro>
 
   <xacro:macro name="tm_material_gold">
     <material name="">
       <color rgba="${color_gold}" />
-    </material>									
+    </material>
   </xacro:macro>
 
   <xacro:macro name="tm_material_iron">

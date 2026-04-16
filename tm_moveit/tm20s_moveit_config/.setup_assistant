@@ -1,0 +1,25 @@
+moveit_setup_assistant_config:
+  urdf:
+    package: tm_gazebo
+    relative_path: xacro/tm20s.urdf.xacro
+  srdf:
+    relative_path: config/tm20s_gz.srdf
+  package_settings:
+    author_name: Yh Wang
+    author_email: yh.wang@tm-robot.com
+    generated_timestamp: 1763974213
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity
+  modified_urdf:
+    xacros:
+      - control_xacro
+  control_xacro:
+    command:
+      - position
+    state:
+      - position
+      - velocity

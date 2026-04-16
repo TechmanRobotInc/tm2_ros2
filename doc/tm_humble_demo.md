@@ -76,7 +76,7 @@ In this demo code, the user can use send_script service sending a script to leav
 
 
 ## &sect; Usage with demo code & driver on the external Linux PC
-> Note: If the user has even successfully built a specific code(tm2_ros2), the user only needs to change to the TM driver workspace path  ``cd ~/tm2_ws``, and then directly refer to steps 5~6 below. <br/>
+> Note: If the user has even successfully built a specific code(tm2_ros2), the user only needs to change to the TM driver workspace path ``cd ~/tm2_ws``, and then directly refer to steps 5~6 below.<br/>
 > 1. Type to create a root workspace directory by starting a terminal: For example,  ``tm2_ws`` or ``catkin_ws``, then type to change the current directory into the workspace directory path.<br/>
 ``mkdir ~/tm2_ws``<br/>
 ``cd ~/tm2_ws``<br/>

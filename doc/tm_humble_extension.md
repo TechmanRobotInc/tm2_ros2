@@ -10,17 +10,18 @@
 > source ./install/setup.bash
 > ```
 > :bulb: Do you prepare the __TM Robot__ ready ? Make sure that TM Robot's operating software (__TMflow__) network settings are ready and the __Listen node__ is running. 
-> 
-> Then, run the driver to test whether the complete communication interface is working properly with the TM Robot by typing 
+>
+> Then, run the driver to test whether the complete communication interface is working properly with the TM Robot by typing
 >
 >```bash
 > ros2 run tm_driver tm_driver robot_ip:=<robot_ip_address>
 >```
 > Example :``ros2 run tm_driver tm_driver robot_ip:=192.168.10.2``, if the <robot_ip_address> is 192.168.10.2
 >
-> Now, the user can use a new terminal to run each ROS node or command, but don't forget to source the correct setup shell files when starting a new terminal.
+> Now, the user can use a new terminal to run each ROS node or command, but don't forget to source the correct setup shell files as starting a new terminal.
 > Note: When you finish executing your developed scripts or motion commands through the TM ROS driver connection, press __CTRL + C__ in all terminal windows to shut everything down.
 
+---
 ## &sect; Usage with MoveIt2-humble (Binary)
 >
 > See [MoveIt2 tutorial](https://moveit.ros.org/install-moveit2/binary/) to install the MoveIt2 packages.<br/>
@@ -75,7 +76,7 @@
 > ros2 launch <tm_robot_type>_moveit_config <tm_robot_type>_run_move_group.launch.py
 > ```
 >
-> The prefix `<tm_robot_type>` means the TM Robot type, available for tm5s, tm7s, tm12s, tm14s, tm25s, tm30s, and (without the integrated camera) tm5sx, tm7sx, tm12sx, tm14sx, tm25sx, and tm30sx models.
+> The prefix __<tm_robot_type>__ means the TM Robot type, available for tm5s, tm6s, tm7s, tm12s, tm14s, tm20s, tm25s, tm30s, and (without the integrated camera) tm5sx, tm7sx, tm12sx, tm14sx, tm25sx, and tm30sx models.
 >>
 >> :bulb: If you have started some executable programs with ROS commands in some terminal windows, it is recommended that you close them and then execute the following commands.<br/>
 >> Taking the TM12S robot as an example, use the commands introduced above, by typing<br/>
@@ -97,11 +98,12 @@
 ``source ./install/setup.bash``<br/>
 ``ros2 launch tm12s_moveit_config tm12s_run_move_group.launch.py robot_ip:=192.168.10.2``
 >
-> Note: When you have finished, press CTRL + C in all terminal windows to shut everything down.<br/>
-> :bookmark_tabs: Note1: There are several built-in TM Robot nominal robot model settings, available for TM5S, TM7S, TM12S, TM14S, TM25S, TM30S, and (without the integrated camera) TM5SX, TM7SX, TM12SX, TM14SX, TM25SX, and TM30SX models.<br/>
+> **Note**: When you have finished, press CTRL + C in all terminal windows to shut everything down.<br/>
+> :bookmark_tabs: Note1: There are several built-in TM Robot nominal robot model settings, available for TM5S, TM6S, TM7S, TM12S, TM14S, TM20S, TM25S, TM30S, and (without the integrated camera) TM5SX, TM7SX, TM12SX, TM14SX, TM25SX, and TM30SX models.<br/>
 > :bookmark_tabs: Note2: TM Robot set the default to read the Xacro file, such as _TM5S_ model, to read the file _tm5s.urdf.xacro_ into robot_description or such as _TM12S_ model, to read the file _tm12s.urdf.xacro_ into robot_description. If the user wants to use the specific model parameters instead of the nominal model to control the robot, please go back to the section __6. Generate your TM Robot-Specific Kinematics Parameters Files__ to modify the Xacro file.<br/>
 > :bookmark_tabs: Note3: __Running two TM ROS drivers at the same IP address is not allowed.__ Since the tm driver node has been written into the moveit launch file, there is no need to execute _ros2 run tm_driver tm_driver robots_ip:=<robot_ip_address>_.<br/>
 
+---
 ## &sect; Usage with Gazebo Simulation 
 >
 > See [Gazebo tutorial](https://gazebosim.org/docs/fortress/install_ubuntu/) to install the Gazebo Fortress (formerly Ignition) libraries.<br/>
@@ -119,14 +121,14 @@
 >
 > :bulb: If you download new packages to expand new applications, it is recommended that you delete the build, install, and log folders in your workspace by the command `rm -rf build install log`, and __recompile the workspace__.<br/>
 > There are several built-in launch files that can be used to start the TM Robot simulated robot using the nominal Xacro robot model settings in Gazebo.
-> The common command's form to bring up the TM simulated robot in Gazebo is as follows: 
+> The common command's form to bring up the TM simulated robot in Gazebo is as follows:
 >
 > ```bash
 > ros2 launch tm_gazebo <tm_robot_type>_gazebo.launch.py
 > ```
 >
-> The prefix `<tm_robot_type>` means the TM Robot type, available for the tm5s, tm7s, tm12s, tm14s, tm25s, tm30s, and (without the integrated camera) tm5sx, tm7sx, tm12sx, tm14sx, tm25sx, and tm30sx models.<br/>
-> 
+> The prefix __<tm_robot_type>__ means the TM Robot type, available for the tm5s, tm6s, tm7s, tm12s, tm14s, tm20s, tm25s, tm30s, and (without the integrated camera) tm5sx, tm7sx, tm12sx, tm14sx, tm25sx, and tm30sx models.<br/>
+>
 >> Taking the TM12S robot as an example, use the ros2 action send_goal command line tool to send some FollowJointTrajectory goals to move to several positions.<br/>
 >> :bulb: If you have started some executable programs with ROS commands in some terminal windows, it is recommended that you close them and then execute the following commands.<br/>
 >> 1. To open the terminal 1: Running with Gazebo.<br/>
