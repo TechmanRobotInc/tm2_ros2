@@ -123,7 +123,7 @@ This chapter describes how the user can use a script program to extract specific
 
 > [!TIP]   
 > 1. If the user just wants to use the TM Robot nominal model to control the robot, the user can skip the rest of this chapter.<br/>
-> 2. The tm_description package contains description files and meshes, available for TM5S, TM6S, TM7S, TM12S, TM14S, TM20S, TM25S, TM30S, and (without the integrated camera) TM5SX, TM7SX, TM12SX, TM14SX, TM25SX, and TM30SX models.<br/>
+> 2. The tm_description package contains description files and meshes, available for TM5S, TM6S, TM7S, TM12S, TM14S, TM20S, TM25S, TM30S, and (without the integrated camera) TM5SX, TM6SX, TM7SX, TM12SX, TM14SX, TM20SX, TM25SX, and TM30SX models.<br/>
 <div> </div>
 
 ## __7. Related ROS Projects and Tutorials Usage__
@@ -133,8 +133,8 @@ See [MoveIt2 tutorial](https://moveit.ros.org/install-moveit2/binary/) to instal
 - [Usage Guideline](./doc/tm_humble_extension.md)
 
 > [!TIP]
-> 1. Some software packages with ROS2 Humble MoveIt2 configurations for TM Cobots are available for TM5S, TM6S, TM7S, TM12S, TM14S, TM20S, TM25S, TM30S, and (without the integrated camera) TM5SX, TM7SX, TM12SX, TM14SX, TM25SX, and TM30SX models.<br/>
-> 2. Some software packages with ROS2 Humble Gazebo Fortress configurations for TM Cobots are available for TM5S, TM6S, TM7S, TM12S, TM14S, TM20S, TM25S, TM30S, and (without the integrated camera) TM5SX, TM7SX, TM12SX, TM14SX, TM25SX, and TM30SX models.<br/>
+> 1. Some software packages with ROS2 Humble MoveIt2 configurations for TM Cobots are available for TM5S, TM6S, TM7S, TM12S, TM14S, TM20S, TM25S, TM30S, and (without the integrated camera) TM5SX, TM6SX, TM7SX, TM12SX, TM14SX, TM20SX, TM25SX, and TM30SX models.<br/>
+> 2. Some software packages with ROS2 Humble Gazebo Fortress configurations for TM Cobots are available for TM5S, TM6S, TM7S, TM12S, TM14S, TM20S, TM25S, TM30S, and (without the integrated camera) TM5SX, TM6SX, TM7SX, TM12SX, TM14SX, TM20SX, TM25SX, and TM30SX models.<br/>
 <div> </div>
 
 ## __8. Contact us / Technical support__   [![Email](https://img.shields.io/badge/-Email-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:tmsales@tm-robot.com)
