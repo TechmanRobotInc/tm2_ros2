@@ -101,7 +101,7 @@
 > **Note**: When you have finished, press CTRL + C in all terminal windows to shut everything down.<br/>
 > :bookmark_tabs: Note1: There are several built-in TM Robot nominal robot model settings, available for TM5S, TM6S, TM7S, TM12S, TM14S, TM20S, TM25S, TM30S, and (without the integrated camera) TM5SX, TM6SX, TM7SX, TM12SX, TM14SX, TM20SX, TM25SX, and TM30SX models.<br/>
 > :bookmark_tabs: Note2: TM Robot set the default to read the Xacro file, such as _TM5S_ model, to read the file _tm5s.urdf.xacro_ into robot_description or such as _TM12S_ model, to read the file _tm12s.urdf.xacro_ into robot_description. If the user wants to use the specific model parameters instead of the nominal model to control the robot, please go back to the section __6. Generate your TM Robot-Specific Kinematics Parameters Files__ to modify the Xacro file.<br/>
-> :bookmark_tabs: Note3: __Running two TM ROS drivers at the same IP address is not allowed.__ Since the tm driver node has been written into the moveit launch file, there is no need to execute _ros2 run tm_driver tm_driver robots_ip:=<robot_ip_address>_.<br/>
+> :bookmark_tabs: Note3: __Running two TM ROS drivers at the same IP address is not allowed.__ Since the tm driver node has been written into the moveit launch file, there is no need to execute _ros2 run tm_driver tm_driver robot_ip:=<robot_ip_address>_.<br/>
 
 ---
 ## &sect; Usage with Gazebo Simulation 

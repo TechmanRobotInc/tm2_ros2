@@ -4,7 +4,7 @@ The TM ROS driver is designed to interface the TM Robot's operating software (__
 ---
 ## __1. Usage and Installation__
 > * This manual is for <u>**ROS2 Humble**</u> vs _TMflow2_ version.<br/>
->> :bulb: The operation interface of _TMflow2_: Navigate to __≡__ and click to expand the function menu, including the icons __Login/Logout__, __Connect__, __View__, __Run Setting__, __Project__, __Configuration__, and __System__. Please refer to _Software Manual TMflow_ ([SW2.14_Rev1.00](https://www.tm-robot.com/zh-hant/wpfd_file/software-manual-tmflow_sw2-14_rev1-00_en/)).<br/>
+>> :bulb: The operation interface of _TMflow2_: Navigate to __≡__ and click to expand the function menu, including the icons __Login/Logout__, __Connect__, __View__, __Run Setting__, __Project__, __Configuration__, and __System__. Please refer to _Software Manual TMflow_ ([SW2.14_Rev1.00](https://www.tm-robot.com/zh-hant/support/download-center/)).<br/>
 >
 > * Just clone the TM ROS driver from the git repository into your working directory and then build it.<br/>
 > * The user can directly return to "__[4. TM Program Script Demonstration](./tm_humble_demo.md)__" introduced above: then refer to steps 1 to 4 of this chapter __&sect; Use the demo code and drivers on an external Linux PC__.<br/>
@@ -146,7 +146,7 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 
 > [!NOTE]
 >> :rocket: We provide a new integration solution of [TM ROS and TM Eye-in-Hand (EIH) Camera API](https://github.com/TechmanRobotInc/tm_eih_cam_client?tab=readme-ov-file), allowing developers to directly access TM EIH Camera resources via the API: For example, by enabling the **TM EIH Camera API Server**, we simplify the cumbersome setup process for users.<br/>
->> For more details about the **TM EIH camera API** _(TMflow ≥ 2.20)_, you can refer to the document:[EIH Camera API Function Manual](https://www.tm-robot.com/zh-hant/download-center/?q=eih&catid=3100&theme=table&limit=5#3100-5372-wpfd-2-20-eih-camera-api)<br/>
+>> For more details about the **TM EIH camera API** _(TMflow ≥ 2.20)_, you can refer to the document:[EIH Camera API Function Manual](https://www.tm-robot.com/zh-hant/support/download-center/)<br/>
 >> If the user use the **TM EIH camera API** to control the robot, the user can skip the rest of this chapter.<br/>
 >
 > The following describes how the user can acquire image data using TM Robot's TMvision&trade; legacy method. **(Built-in Vision System)**
@@ -159,12 +159,13 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 > __Dependencies__
 >
 > - ROS2 Humble
+>
 > - Python packages:
 >   1. flask==3.0.0
 >   2. waitress==2.1.2
 >   3. opencv-python==4.8.0.74
 >   4. numpy==1.21.5
->   5. datetime  
+>   5. datetime
 >
 >    For example, install Python3 packages: 
 >      *  pip3 install flask
@@ -203,7 +204,7 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 
   <img src="./figures/AOIonly.png" width="1000" height="500">
 
-> Note: TMflow software version changes may have slightly different settings([SW2.14_Rev1.00](https://www.tm-robot.com/zh-hant/wpfd_file/software-manual-tmflow_sw2-14_rev1-00_en/)).<br/>
+> Note: TMflow software version changes may have slightly different settings.<br/>
 >
 > 3. Click __Find__ &rArr; __External Detection__, which adds an _External Detection_ node to the Vision Job flow.
 <br/>
@@ -229,7 +230,7 @@ The user can manually click the `Data Table Setting` <sup>2</sup> item and check
 
 > 6. Don't forget to press the Play/Pause Button on the Robot Stick to start running this _Vision task_ project.
 >
->    Note: For more about __External Detection__, please refer to Software Manual TMvision([SW2.14_Rev1.00](https://www.tm-robot.com/zh-hant/wpfd_file/software-manual-tmvision_sw2-14_rev1-00_en/)).<br/>
+>    Note: For more about __External Detection__, please refer to Software Manual TMvision([SW2.14_Rev1.00](https://www.tm-robot.com/zh-hant/support/download-center/)).<br/>
 
 
 ###  &sect; TMflow Vision node usage

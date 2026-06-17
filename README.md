@@ -18,9 +18,9 @@ The TM ROS driver connects to _TMflow Ethernet Slave_ to control _TMflow_ projec
 &#10146; <sup>3</sup>  __TMscript__ is the programming language of Techman Robot applicable to Flow projects and Script projects.<br/>
 &#10146; <sup>4</sup>  __Techman Robot Expression__ (defined protocol) is the programming language of Techman Robot applicable to Flow programming projects and Script programming projects.<br/>
 >
-Some relevant references [Docs](https://www.tm-robot.com/en/docs/introducing-tmflow-2-14/):
-> :bookmark_tabs: The _Expression Editor_ version changes may have slightly different settings. (Several old versions for reference: ([Expression Editor_1.88_Rev1.00](https://www.tm-robot.com/zh-hant/wpfd_file/expression-editor_1-88_rev1-00_en/)) ([1.84_Rev1.00](https://www.tm-robot.com/zh-hant/wpfd_file/expression-editor-and-listen-node_1-84_rev1-00_en-2/))<br/>
-> :bookmark_tabs: The user can download the new "_Expression Editor Manual_" from [TM Download Center](https://www.tm-robot.com/en/download-center/) or [Contact us](https://www.tm-robot.com/en/contact-us/).<br/>
+Some relevant references [Docs](https://www.tm-robot.com/en/support/technical-document/):
+> :bookmark_tabs: The _Expression Editor_ version changes may have slightly different settings.<br/>
+> :bookmark_tabs: The user can download the new "_Expression Editor Manual_" from [TM Download Center](https://www.tm-robot.com/en/support/download-center/) or [Contact us](https://www.tm-robot.com/en/support/contact-us/).<br/>
 
 TM ROS Driver consists of three main parts: Topic Publisher, Service Server, and Action Server:
 
@@ -92,6 +92,13 @@ If the user wants to know how to use the TM ROS driver, please visit the TM ROS 
         <th>&#9711;</th>
         <th>humble</th>
     </tr>
+    <tr>
+        <td><a href="https://docs.ros.org/en/jazzy/index.html">ROS 2 Jazzy Jalisco</a></td>
+        <td><a href="https://github.com/TechmanRobotInc/tm2_ros2/tree/jazzy">TM2 ROS2 Jazzy</a></td>
+        <th>&#9711;</th>
+        <th>&#9711;</th>
+        <th>jazzy</th>
+    </tr>
 </table>
 
 &#10148; Example: If your ROS PC is installed with ROS 2 Humble Hawksbill, see [TM2 ROS2 Humble](https://github.com/TechmanRobotInc/tm2_ros2/tree/humble).<br/>
@@ -99,8 +106,8 @@ If the user wants to know how to use the TM ROS driver, please visit the TM ROS 
 - [Usage Guideline](./doc/tm_humble.md)
 
 > :bookmark_tabs: The drivers require a relevant system with ROS installed. This repository provides the external _TM2 ROS2 Humble Driver_ and related  software packages.<br/>
-> :bookmark_tabs: Using _TMflow_, especially the Listen Nodes and Vision Nodes (external detection), please refer to _Software Manual TMflow ([SW2.14](https://www.tm-robot.com/zh-hant/wpfd_file/software_tmflow_sw2-14_rev1-01_en/))_  and _Software Manual TMvision ([SW2.14](https://www.tm-robot.com/zh-hant/wpfd_file/software_tm-3dvision_sw2-14_rev1-00_en/))_ for more details.<br/>
-> :bookmark_tabs: Using _TMscript_ (expressions, the Listen Node commands, etc.), please refer to the Manual: [Programming Language TMscript](https://www.tm-robot.com/zh-hant/wpfd_file/programming-language-tmscript_2-20_rev1-0_en/) for more details.<br/>
+> :bookmark_tabs: Using _TMflow_, especially the Listen Nodes and Vision Nodes (external detection), please refer to _Software Manual TMflow ([SW2.14](https://www.tm-robot.com/zh-hant/support/download-center/))_  and _Software Manual TMvision ([SW2.14](https://www.tm-robot.com/zh-hant/support/download-center/))_ for more details.<br/>
+> :bookmark_tabs: Using _TMscript_ (expressions, the Listen Node commands, etc.), please refer to the Manual: [Programming Language TMscript](https://www.tm-robot.com/zh-hant/support/download-center/) for more details.<br/>
 
 <div> </div>
 
@@ -137,6 +144,7 @@ See [MoveIt2 tutorial](https://moveit.ros.org/install-moveit2/binary/) to instal
 > 2. Some software packages with ROS2 Humble Gazebo Fortress configurations for TM Cobots are available for TM5S, TM6S, TM7S, TM12S, TM14S, TM20S, TM25S, TM30S, and (without the integrated camera) TM5SX, TM6SX, TM7SX, TM12SX, TM14SX, TM20SX, TM25SX, and TM30SX models.<br/>
 <div> </div>
 
-## __8. Contact us / Technical support__   [![Email](https://img.shields.io/badge/-Email-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:tmsales@tm-robot.com)
-More Support & Service, please contact us. [@TECHMAN ROBOT](https://www.tm-robot.com/en/contact-us/)``[https://www.tm-robot.com/en/contact-us/] ``<br/>
+## __8. Contact Us / Technical Support__   [![Email](https://img.shields.io/badge/-Email-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:tmsales@tm-robot.com)
+Access to some software, manuals, and technical documents requires logging into the official [TM Download Center](https://www.tm-robot.com/en/support/download-center/).<br/>
+For further support and service, please contact us: [TM Contact Us](https://www.tm-robot.com/en/support/contact-us/) | 📞 [+886-3-3288350](tel:+88633288350)<br/>
 <div> </div>
