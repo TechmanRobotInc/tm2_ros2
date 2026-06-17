@@ -1,7 +1,7 @@
 # __Related Projects and Tutorials Usage__
 ## &sect; ROS2 driver usage
 > 
-> After the user has set up the ROS2 environment (example : [Debian packages for ROS 2 Foxy](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html)) and built the TM driver based on the specific workspace, please enter your workspace `<workspace>` by launching the terminal, and remember to make the workspace visible to ROS. 
+> After the user has set up the ROS2 environment (example : [Debian packages for ROS 2 Foxy](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html)) and built the TM ROS Apps based on the specific workspace, please enter your workspace `<workspace>` by launching the terminal, and remember to make the workspace visible to ROS. 
 >
 >
 > ```bash
@@ -10,8 +10,8 @@
 > source ./install/setup.bash
 > ```
 > :bulb: Do you prepare the __TM Robot__ ready ? Make sure that TM Robot's operating software (__TMflow__) network settings are ready and the __Listen node__ is running. 
-> 
-> Then, run the driver to test whether the complete communication interface is properly working with TM Robot by typing 
+>
+> Then, run the driver to test whether the complete communication interface is working properly with the TM Robot by typing
 >
 >```bash
 > ros2 run tm_driver tm_driver robot_ip:=<robot_ip_address>
@@ -32,7 +32,7 @@
 > ```
 >
 > The `<MoveIt_WS>` means the MoveIt2 workspace, for example `ws_moveit2` .<br/>
-> The `<tm2_ws>` means TM driver workspace, for example `tm2_ws` .<br/>
+> The `<tm2_ws>` means TM ROS Apps workspace, for example `tm2_ws` .<br/>
 >
 > To build MoveIt2 
 > ```bash
@@ -41,7 +41,7 @@
 > ```
 >
 > Assuming that the user is ready to build MoveIt2, and the user wants to apply the MoveIt by TM Robot, please do'nt forget to source the MoveIt environment, or you can add  ``source <MoveIt_WS>/install/setup.bash`` to your `.bashrc`.<br/>
-> Then to build the TM driver based on the <tm2_ws> workspace, please enter the specific workspace `tm2_ws` by launching the terminal, and remember to make the workspace visible to ROS.<br/>
+> Then, to build the TM ROS Apps based on the <tm2_ws> workspace, please enter the specific workspace `tm2_ws` by launching the terminal, and remember to make the workspace visible to ROS.<br/>
 >
 >
 > ```bash
@@ -53,7 +53,7 @@
 > source ./install/setup.bash
 > ```
 >
-> :bulb: If you have built the TM driver before, it is recommended that you delete the build, install and log folders by the command `rm -rf build install log`, and rebuild it. For example,<br/>
+> :bulb: If you have built the TM ROS Apps before or downloaded new packages to expand new applications, it is recommended that you delete the build, install, and log folders by the command `rm -rf build install log`, and __recompile the workspace__. For example,<br/>
 >
 >
 > ```bash
@@ -83,7 +83,7 @@
 > ros2 launch tm_moveit_cpp_demo tm12s_run_moveit_cpp.launch.py
 > ```
 >
-> Note: When you are finished, press CTRL + C in all terminal windows to shut everything down.<br/>
+> **Note**: When you have finished, press CTRL + C in all terminal windows to shut everything down.<br/>
 > The package tm_move_group provides a launch configuration for running a MoveGroup setup. The user can start planning and executing motions using the RViz MotionPlanning display.<br/>
 > :bulb: Do you prepare the __TM Robot__ ready ? Make sure that TM Robot's operating software (__TMflow__) network settings are ready and the __Listen node__ is running.<br/>
 >
@@ -119,6 +119,6 @@
 > Note: When you have finished, press CTRL + C in all terminal windows to shut everything down.<br/>
 > :bookmark_tabs: Note1: There are several built-in TM Robot nominal robot model settings, available for TM5S, TM7S, TM12S, TM14S, and TM25S models.<br/>
 > :bookmark_tabs: Note2: TM Robot set the default to read the Xacro file, such as _TM5S_ model, to read the file _tm5s.urdf.xacro_ into robot_description or such as _TM12S_ model, to read the file _tm12s.urdf.xacro_ into robot_description. If the user wants to use the specific model parameters instead of the nominal model to control the robot, please go back to the section __6. Generate your TM Robot-Specific Kinematics Parameters Files__ to modify the Xacro file.<br/>
-> :bookmark_tabs: Note3: __Running two tm ros drivers at the same IP address is not allowed.__ Since the tm driver node has been written into the moveit launch file, there is no need to execute _ros2 run tm_driver tm_driver robots_ip:=<robot_ip_address>_.<br/>
+> :bookmark_tabs: Note3: __Running two TM ROS drivers at the same IP address is not allowed.__ Since the tm driver node has been written into the moveit launch file, there is no need to execute _ros2 run tm_driver tm_driver robot_ip:=<robot_ip_address>_.<br/>
 <div> </div>
 
