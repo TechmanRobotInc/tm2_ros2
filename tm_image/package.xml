@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
+  <name>tm_image</name>
+  <version>2.1.0</version>
+  <description>tm_image</description>
+
+  <maintainer email="leo.wu@tm-robot.com">leo wu</maintainer>
+  <maintainer email="yh.wang@tm-robot.com">Yh Wang</maintainer>
+
+  <license>BSD-3-Clause</license>
+
+  <buildtool_depend>ament_python</buildtool_depend>
+
+  <exec_depend>python3-flask</exec_depend>
+  <exec_depend>python3-waitress</exec_depend>
+  <exec_depend>python3-numpy</exec_depend>
+  <exec_depend>python3-opencv</exec_depend>
+  <exec_depend>rclpy</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>

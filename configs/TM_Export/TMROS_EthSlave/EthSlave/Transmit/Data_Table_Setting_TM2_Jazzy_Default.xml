@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<File ID="7DF73DB8DB94AD8066C128D1E3A38262">
+  <Version>2</Version>
+  <FormType>TRANSMIT</FormType>
+  <CommMode>BINARY</CommMode>
+  <CodeTable>
+    <Setting Item="Robot_Error" Description="Error or Not" Type="bool" Size="1" Accessibility="R" Note1="Yes: 1 No: 0" WritableMode="" />
+    <Setting Item="Project_Run" Description="Project Running or Not" Type="bool" Size="1" Accessibility="R" Note1="Yes: 1 No: 0" WritableMode="" />
+    <Setting Item="Project_Pause" Description="Project Pause or Not" Type="bool" Size="1" Accessibility="R" Note1="Yes: 1 No: 0" WritableMode="" />
+    <Setting Item="Joint_Angle" Description="Joint 1 angle - Joint 6 angle" Type="float" Size="6" Accessibility="R" Note1="Unit: degree" WritableMode="" />
+    <Setting Item="Coord_Robot_Flange" Description="Cartesian coordinate w.r.t. Robot Base without tool" Type="float" Size="6" Accessibility="R" Note1="Unit: mm, deg" WritableMode="" />
+    <Setting Item="Coord_Robot_Tool" Description="Cartesian coordinate w.r.t. Robot Base with tool" Type="float" Size="6" Accessibility="R" Note1="Unit: mm, deg" WritableMode="" />
+    <Setting Item="TCP_Force" Description="Tool Force FX,FY,FZ" Type="float" Size="3" Accessibility="R" Note1="Unit: N" WritableMode="" />
+    <Setting Item="TCP_Force3D" Description="Tool Force FX,FY,FZ 3D" Type="float" Size="1" Accessibility="R" Note1="Unit: N" WritableMode="" />
+    <Setting Item="TCP_Speed" Description="Tool Speed X,Y,Z,RX,RY,RZ" Type="float" Size="6" Accessibility="R" Note1="Unit: mm/s, deg/s" WritableMode="" />
+    <Setting Item="TCP_Speed3D" Description="Tool Speed X,Y,Z 3D" Type="float" Size="1" Accessibility="R" Note1="Unit: mm/s" WritableMode="" />
+    <Setting Item="Joint_Speed" Description="Joint Speed" Type="float" Size="6" Accessibility="R" Note1="Unit: deg/s" WritableMode="" />
+    <Setting Item="Joint_Torque" Description="Joint Torque 1 - 6" Type="float" Size="6" Accessibility="R" Note1="Unit: mNm" WritableMode="" />
+    <Setting Item="Robot_Light" Description="Robot Light" Type="byte" Size="1" Accessibility="R" Note1="0: Light off, when robot power off.&amp;#13;&amp;#10;1: Solid Red, fatal error.&amp;#13;&amp;#10;2: Flashing Red, Robot is initializing.&amp;#13;&amp;#10;3: Solid Green, standby in Manual Mode.&amp;#13;&amp;#10;4. Flashing Green, in Manual Mode.&amp;#13;&amp;#10;5: Alternating Green&amp;Red, Manual Mode error.&amp;#13;&amp;#10;6: Alternating Yellow&amp;Green, in Manual Mode &amp; Recovery mode.&amp;#13;&amp;#10;7: Alternating Purple&amp;Green, in Manual Mode (Human Machine Safety Settings trigger).&amp;#13;&amp;#10;8: Alternating Blue&amp;Green, in Manual Mode &amp; Maintenance mode.&amp;#13;&amp;#10;9: Solid White, standby in Auto Mode.&amp;#13;&amp;#10;10. Flashing White, in Auto Mode.&amp;#13;&amp;#10;11: Alternating White&amp;Red, Auto Mode error.&amp;#13;&amp;#10;12: Alternating Yellow&amp;White, in Auto Mode &amp; Recovery mode.&amp;#13;&amp;#10;13: Alternating Purple&amp;White, in Auto Mode (Human Machine Safety Settings trigger).&amp;#13;&amp;#10;14: Alternating Blue&amp;White, in Auto Mode &amp; Maintenance mode." WritableMode="" />
+    <Setting Item="ESTOP" Description="Emergency Stop" Type="bool" Size="1" Accessibility="R" Note1="Triggered: 1 Restored: 0" WritableMode="" />
+    <Setting Item="Camera_Light" Description="Light" Type="byte" Size="1" Accessibility="R/W" Note1="Enable: 1 Disable: 0" WritableMode="M/A" />
+    <Setting Item="Error_Code" Description="Last Error Code" Type="int" Size="1" Accessibility="R" Note1="Format: Hexadecimal" WritableMode="" />
+    <Setting Item="Ctrl_DO0" Description="Digital Output 0" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="Ctrl_DO1" Description="Digital Output 1" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="Ctrl_DO2" Description="Digital Output 2" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="Ctrl_DO3" Description="Digital Output 3" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="Ctrl_DO4" Description="Digital Output 4" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="Ctrl_DO5" Description="Digital Output 5" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="Ctrl_DO6" Description="Digital Output 6" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="Ctrl_DO7" Description="Digital Output 7" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="Ctrl_DO8" Description="Digital Output 8" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="Ctrl_DO9" Description="Digital Output 9" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="Ctrl_DO10" Description="Digital Output 10" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="Ctrl_DO11" Description="Digital Output 11" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="Ctrl_DO12" Description="Digital Output 12" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="Ctrl_DO13" Description="Digital Output 13" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="Ctrl_DO14" Description="Digital Output 14" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="Ctrl_DO15" Description="Digital Output 15" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="Ctrl_DI0" Description="Digital Input 0" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="Ctrl_DI1" Description="Digital Input 1" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="Ctrl_DI2" Description="Digital Input 2" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="Ctrl_DI3" Description="Digital Input 3" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="Ctrl_DI4" Description="Digital Input 4" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="Ctrl_DI5" Description="Digital Input 5" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="Ctrl_DI6" Description="Digital Input 6" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="Ctrl_DI7" Description="Digital Input 7" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="Ctrl_DI8" Description="Digital Input 8" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="Ctrl_DI9" Description="Digital Input 9" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="Ctrl_DI10" Description="Digital Input 10" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="Ctrl_DI11" Description="Digital Input 11" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="Ctrl_DI12" Description="Digital Input 12" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="Ctrl_DI13" Description="Digital Input 13" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="Ctrl_DI14" Description="Digital Input 14" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="Ctrl_DI15" Description="Digital Input 15" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="Ctrl_AO0" Description="Analog Output 0" Type="float" Size="1" Accessibility="R/W" Note1="Unit: Volt" WritableMode="M/A" />
+    <Setting Item="Ctrl_AI0" Description="Analog Input 0" Type="float" Size="1" Accessibility="R" Note1="Unit: Volt" WritableMode="" />
+    <Setting Item="Ctrl_AI1" Description="Analog Input 1" Type="float" Size="1" Accessibility="R" Note1="Unit: Volt" WritableMode="" />
+    <Setting Item="End_DO0" Description="End Module Digital Output 0" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="End_DO1" Description="End Module Digital Output 1" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="End_DO2" Description="End Module Digital Output 2" Type="byte" Size="1" Accessibility="R/W" Note1="High: 1 Low: 0" WritableMode="M/A" />
+    <Setting Item="End_DI0" Description="End Module Digital Input 0" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="End_DI1" Description="End Module Digital Input 1" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="End_DI2" Description="End Module Digital Input 2" Type="byte" Size="1" Accessibility="R" Note1="High: 1 Low: 0" WritableMode="" />
+    <Setting Item="End_AI0" Description="End Module Analog Input 0" Type="float" Size="1" Accessibility="R" Note1="Unit: Volt" WritableMode="" />
+    <Setting Item="Project_Speed" Description="Project Running Speed" Type="byte" Size="1" Accessibility="R/W" Note1="Unit: %&amp;#13;&amp;#10;Project speed can only be written multiples of five (5≦Project Speed≦100)&amp;#13;&amp;#10;*Refer to Safety Manual for details" WritableMode="M/A" />
+    <Setting Item="Joint_Torque_EST" Description="Joint Torque 1 - 6 (Estimated Data)" Type="float" Size="6" Accessibility="R" Note1="Unit: mNm" WritableMode="" />
+    <Setting Item="Joint_Torque_Average" Description="Joint Torque 1 - 6 (Average in 40ms)" Type="float" Size="6" Accessibility="R" Note1="Unit: mNm" WritableMode="" />
+    <Setting Item="Joint_Torque_Min" Description="Joint Torque 1 - 6 (Min. in 40ms)" Type="float" Size="6" Accessibility="R" Note1="Unit: mNm" WritableMode="" />
+    <Setting Item="Joint_Torque_Max" Description="Joint Torque 1 - 6 (Max. in 40ms)" Type="float" Size="6" Accessibility="R" Note1="Unit: mNm" WritableMode="" />
+  </CodeTable>
+</File>
