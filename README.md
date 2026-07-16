@@ -128,7 +128,21 @@ This chapter describes a simplified GUI for displaying tm_driver connection stat
 - [Usage Guideline](./doc/tm_jazzy_gui.md)
 <div> </div>
 
-## __6. Contact Us / Technical Support__   [![Email](https://img.shields.io/badge/-Email-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:tmsales@tm-robot.com)
+## __6. Generate your TM Robot-Specific Kinematics Parameters Files__
+Real kinematic values vary from one TM robot to another as each robot is calibrated at the factory.<br/>
+This chapter describes how the user can use a script program to extract specific kinematic values from your TM robot. The Python script function automatically generates a new URDF robot file that has XML macros in it (i.e., a new Xacro robot file) using a specific set of commands.
+- [Usage Guideline](./doc/tm_jazzy_description.md)
+
+> [!TIP]   
+> If the user just wants to use the TM Robot nominal model to control the robot, the user can skip the rest of this chapter.<br/>
+
+> [!IMPORTANT]
+> The tm_description package includes files and meshes _only_ for:<br/>
+> _TM12S Cobots Series_: TM12S only<br/>
+> _TM5-900 Cobots Series_: TM5-900 only<br/>
+<div> </div>
+
+## __7. Contact Us / Technical Support__   [![Email](https://img.shields.io/badge/-Email-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:tmsales@tm-robot.com)
 Access to some software, manuals, and technical documents requires logging into the official [TM Download Center](https://www.tm-robot.com/en/support/download-center/).<br/>
 For further support and service, please contact us: [TM Contact Us](https://www.tm-robot.com/en/support/contact-us/) | 📞 [+886-3-3288350](tel:+88633288350)<br/>
 <div> </div>

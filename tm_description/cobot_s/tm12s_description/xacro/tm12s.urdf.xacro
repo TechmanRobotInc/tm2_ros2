@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="tm12s">
+  <!-- ARGUMENTS -->
+  <xacro:arg name="ns" default="" />
+  <xacro:arg name="prefix" default="" />
+  <xacro:arg name="color" default="emeraldgreen" />
+  <xacro:arg name="dae_parse_gzskin" default="false" />
+
+  <!-- Import materials colors -->
+  <xacro:include filename="$(find tm12s_description)/xacro/macro.materials.xacro" />
+  <xacro:include filename="$(find tm12s_description)/xacro/macro.inertial.xacro" />
+
+
+  <!-- Import TM Cobot: tm12s robot description file -->
+  <!-- If the user want to use newly generated named robot description file as user_defined.urdf.xacro, -->
+  <!-- you must modify 'macro.tm12s-nominal.urdf.xacro' to 'user_defined.urdf.xacro'  -->
+  <xacro:include filename="$(find tm12s_description)/xacro/macro.tm12s-nominal.urdf.xacro" />
+
+  <!-- Import TM Cobot: mesh.color.default -->
+  <xacro:tm12s ns="$(arg ns)" prefix="$(arg prefix)" color="$(arg color)" format="dae" dae_parse_gzskin="$(arg dae_parse_gzskin)" />
+
+</robot>
