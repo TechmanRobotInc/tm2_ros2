@@ -1,0 +1,12 @@
+# ==============================================================================
+# File Name:   user_workspace.txt
+# Description: Techman Robot Deployment Loader Script - User Workspace Config File
+# Version:     1.0.0
+# ==============================================================================
+# INSTRUCTION: Adjust the workspace path to your local directory setup.
+# IMPORTANT: Do NOT leave a trailing slash '/' at the end of the path.
+
+# ---- Custom Setup (Specify the root directory of your ROS 2 workspace) ----
+# TM ROS 2 standard source code directory tm2_ros2 (Acts as the 'src' space).
+# If your active ROS workspace name is tm2_ws:
+WS_ROOT=$HOME/tm2_ws/tm2_ros2
