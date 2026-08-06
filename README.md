@@ -111,7 +111,7 @@ If the user wants to know how to use the TM ROS driver, please visit the TM ROS 
 
 > [!TIP]
 > - Remember to configure the _Ethernet Slave Data setting_ of _TMflow_:<br/>
->>:rocket: See [TM ROS Jazzy Driver vs TMflow Software Usage: Import Data Table Setting](https://github.com/TechmanRobotInc/tm2_ros2/tree/jazzy/configs/README.md).<br/>
+>>:rocket: See [TM ROS Jazzy Driver vs TMflow Software Usage: Import Data Table Setting](https://github.com/TechmanRobotInc/tm2_ros2/tree/jazzy/configs/TM_Export/README.md).<br/>
 > - Usage to get the Image by the TM _EIH_ Camera API:
 >> :rocket: See [TM ROS and TM _Eye-in-Hand_ (_EIH_) Camera API](https://github.com/TechmanRobotInc/tm_eih_cam_client?tab=readme-ov-file), allowing developers to directly access TM EIH Camera resources via the API.<br/>
 <div> </div>
@@ -140,6 +140,7 @@ This chapter describes how the user can use a script program to extract specific
 > The tm_description package includes files and meshes _only_ for:<br/>
 > _TM12S Cobots Series_: TM12S only<br/>
 > _TM5-900 Cobots Series_: TM5-900 only<br/>
+> To download other models, please visit [TM_Cobots_ROS2_Description](https://github.com/TechmanRobotInc/TM_Cobots_ROS2_Description/).<br/>
 <div> </div>
 
 ## __7. Contact Us / Technical Support__   [![Email](https://img.shields.io/badge/-Email-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:tmsales@tm-robot.com)

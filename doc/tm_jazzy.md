@@ -34,7 +34,7 @@ The __Listen node__: a socket server can be established and be connected with RO
 
 > [!NOTE]
 > Previously, TM ROS required manual setup of Ethernet Slave entries. Users had to [manually select every predefined parameter](https://github.com/TechmanRobotInc/tm2_ros2/tree/jazzy/doc/tm_jazzy_ethernet_slave_data_set.md) to ensure the Data Table was correctly configured without omissions. The method has been changed to directly __import a software package__<sup>1</sup> containing the specified configuration file "Data_Table_Setting_TM2_Jazzy_Default" to configure the Ethernet Slave Data Table.<br/> 
-> :rocket: <sup>1</sup> See [TM ROS Jazzy Driver vs TMflow Software Usage: Import Data Table Setting](https://github.com/TechmanRobotInc/tm2_ros2/tree/jazzy/configs/README.md).<br/>
+> :rocket: <sup>1</sup> See [TM ROS Jazzy Driver vs TMflow Software Usage: Import Data Table Setting](https://github.com/TechmanRobotInc/tm2_ros2/tree/jazzy/configs/TM_Export/README.md).<br/>
 >> **Note**: Set the `Commounicate Mode`: __BINARY__<br/>
 >
 <br/>

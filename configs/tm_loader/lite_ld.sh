@@ -2,11 +2,13 @@
 ###########################################################################################
 # Script Name: lite_ld.sh                                                                 #
 # Description: Techman Robot Deployment Loader Script - Lite Download Wrapper             #
-# Version:     1.0.0                                                                      #
+# Version:     1.1.0                                                                      #
 # Usage:       ./lite_ld.sh [MODEL] [PACKAGE (optional)] [-f (optional)]                  #
 ###########################################################################################
 
 # ANSI Terminal Color Escape Codes
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
 RED='\033[1;31m'
 NC='\033[0m' # No Color (Reset)
 
@@ -129,11 +131,11 @@ if [ -n "$DEST_PARENT" ]; then
     DEST_PARENT="${DEST_PARENT_BASE}/${SERIES_DIR}"
 fi
 
-echo "[INFO] Input Model: $MODEL -> Resolved Baseline Target: $RESOLVED_MODEL_NAME ($PACKAGE)"
-echo "[INFO] Destination parent directory: $DEST_PARENT"
-echo "[INFO] Target deployment directory: $TARGET_DIR"
+echo -e "${GREEN}[INFO] Input Model: $MODEL -> Resolved Baseline Target: $RESOLVED_MODEL_NAME ($PACKAGE)${NC}"
+echo -e "[INFO] Destination parent directory: $DEST_PARENT"
+echo -e "[INFO] Target deployment directory: $TARGET_DIR"
 if [ "$FORCE_OVERWRITE" = true ]; then
-    echo "[INFO] Force overwrite is ENABLED."
+    echo -e "${YELLOW}[INFO] Force overwrite is ENABLED.${NC}"
 fi
 
 # ==============================================================================
@@ -188,23 +190,15 @@ if [ -d "$REMOTE_SUB_PATH" ]; then
     fi
 
     # --------------------------------------------------------------------------
-    # LIVE COPY PROGRESS TRACKER (Prevents freeze illusion)
+    # FLAT DEPLOYMENT SEQUENCE (Resolves deep path layout structures)
     # --------------------------------------------------------------------------
-    mv "$REMOTE_SUB_PATH" "../$TARGET_DIR" &
-    MV_PID=$!
+    echo "[INFO] Deploying extracted profile into target environment..."
+    
+    # Safely migrate the deeply nested structure back up into the user layout
+    mv "$REMOTE_SUB_PATH" "../$TARGET_DIR"
+    sync
 
-    COUNTER=0
-    # While the move process is active in the background, tick the timer
-    while kill -0 $MV_PID 2>/dev/null; do
-        echo -ne "\r[PROCESS] Copying and deploying files... Please wait: ${COUNTER}s\033[K"
-        sleep 1
-        ((COUNTER++))
-    done
-
-    # Completely clear the interactive ticker line
-    echo -ne "\r\033[K"
-
-    echo "[SUCCESS] $TARGET_DIR is deployed and ready for use."
+    echo -e "${GREEN}[SUCCESS] $TARGET_DIR is deployed and ready for use.${NC}"
 else
     echo -e "${RED}[ERROR] Remote path '$REMOTE_SUB_PATH' not found in repository. Deployment failed.${NC}"
     exit 1

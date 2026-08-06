@@ -3,7 +3,7 @@
 > Step2: Insert the <u>USB drive<u> into to <u>Control Box<u>, and navigate to &rArr;  System &rArr; Import/Export to import the component onto the robot.<br/>
 
 <br/>
-    ![Usb_Label_Name_TMROBOT.png](TM_Export/figures/Usb_Label_Name_TMROBOT.png)
+    ![Usb_Label_Name_TMROBOT.png](./figures/Usb_Label_Name_TMROBOT.png)
 
 ## __Import Data Table Setting__
   To use the Import function: Click on the Import button at the top left, select the robot of the data source in the flash drive from the robot list, and then select the desired data from the Select file box. Click an item in this box to add the item to the Selected Files box. After completing the new addition, click Import in the bottom-right corner to start the Import procedure.<br/>

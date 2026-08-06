@@ -2,7 +2,7 @@
 ###########################################################################################
 # Script Name: tm_repo_config.sh                                                          #
 # Description: Repository & Path Configuration Launcher                                   #
-# Version:     1.0.0                                                                      #
+# Version:     1.1.0                                                                      #
 ###########################################################################################
 
 # ==============================================================================
@@ -11,6 +11,14 @@
 echo "============================================================================"
 echo "🤖 Techman Robot ROS 2 Environment Initializer"
 echo "============================================================================"
+
+if [ -f "./user_workspace.txt" ]; then
+    echo "📂 Loading workspace configurations from user_workspace.txt..."
+    source ./user_workspace.txt
+else
+    echo "❌ Error: 'user_workspace.txt' was not found in the current directory."
+    exit 1
+fi
 
 # Hardcoded execution mode selection: "1" = Check, "2" = Install
 Default_CHOICE="1"
@@ -47,7 +55,6 @@ BRANCH_tm_gazebo="main"
 # ==============================================================================
 # Local destination parent directories (dynamically based on $WS_ROOT)
 # ==============================================================================
-DIR_tm_description="$WS_ROOT/tm_description/cobot_s"
-DIR_tm_moveit="$WS_ROOT/tm_moveit/cobot_s"
-DIR_tm_gazebo="$WS_ROOT/tm_gazebo/cobot_s"
-
+DIR_tm_description="$WS_ROOT/$SRC_DIR/tm_description/cobot_s"
+DIR_tm_moveit="$WS_ROOT/$SRC_DIR/tm_moveit/cobot_s"
+DIR_tm_gazebo="$WS_ROOT/$SRC_DIR/tm_gazebo/cobot_s"
