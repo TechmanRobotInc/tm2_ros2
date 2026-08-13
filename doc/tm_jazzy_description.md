@@ -1,12 +1,12 @@
 # __Generate your TM Robot-Specific Kinematics Parameters Files__
-Real kinematic values vary from one TM robot to another as each robot is calibrated at the factory.<br/>
+Real kinematic values vary from one TM robot to another, as each robot is calibrated at the factory.<br/>
 The user can use the tm_mod_urdf package to extract specific kinematic values from your TM robot, which are taken into account by a Python script function using a specific set of commands to automatically generate a new Xacro robot model description file.
 > If the user just wants to use the TM Robot nominal model to control the robot, the user can skip the rest of this chapter.<br/>
 
 ## &sect; Corrected kinematics value description
  > The precise kinematic parameters of a robot are useful for improving the end-point accuracy of the robot.<br/>
- > Due to manufacturing tolerances during manufacturing and the installation error in the robot assembly process, the positioning accuracy and precision of the mechanism will be affected. The error between the reality and the nominal robot model is significantly reduced by the corrected robot description. The kinematic parameter compensated deviations of the robot can improve the absolute positioning accuracy of the robot.<br/>
- > If the user needs to improve simulation accuracy or end effector tracking performance, it is recommended that the user import the corrected calibrated kinematic parameters from the real TM Robot to replace the nominal set of D-H parameters. Techman Robot provides the Xacro file that configures the TM Robot model with a set of nominal DH parameters, and one that uses the programming scripts to obtain calibrated kinematic parameters from a parameter server connected to your TM robot and perform a set of overrides to output a new corrected Xacro file.<br/>
+ > Due to manufacturing tolerances during manufacturing and installation errors in the robot assembly process, the positioning accuracy and precision of the mechanism will be affected. The error between reality and the nominal robot model is significantly reduced by the corrected robot description. The kinematic parameter compensated deviations of the robot can improve the absolute positioning accuracy of the robot.<br/>
+ > If the user needs to improve simulation accuracy or end-effector tracking performance, it is recommended that the user import the corrected calibrated kinematic parameters from the real TM Robot to replace the nominal set of D-H parameters. Techman Robot provides the Xacro file that configures the TM Robot model with a set of nominal DH parameters, and one that uses the programming scripts to obtain calibrated kinematic parameters from a parameter server connected to your TM robot and perform a set of overrides to output a new corrected Xacro file.<br/>
  > <br/>
  > The common Python script is used as follows:
  >```bash
@@ -29,12 +29,12 @@ The user can use the tm_mod_urdf package to extract specific kinematic values fr
 
 
 ## &sect; Create with specific kinematic parameters of the local TM Robot
-> :bulb: Do you run the driver to maintain the connection with TM Robot, make sure that TM Robot's operating software (TMflow) network settings are ready, and the Listen node is running.<br/>
+> :bulb: Do you run the driver to maintain the connection with the TM Robot, make sure that the TM Robot's operating software (TMflow) network settings are ready, and the Listen node is running.<br/>
 > <br/>
 > * #### __Take generating a new Xacro file as an example__
 > The following steps describe how to import specific kinematic values using a real `TM12S` Robot, following the procedure below, and select the corresponding type `tm12s` as an example of <urdf_from>.<br/>
 >
-> 1. In a terminal: Source setup.bash in the workspace path and run the driver to connect to TM Robot by typing<br/>
+> 1. In a terminal: Source setup.bash in the workspace path and run the driver to connect to the TM Robot by typing<br/>
 >
 > ```bash
 > source /opt/ros/jazzy/setup.bash
@@ -42,9 +42,9 @@ The user can use the tm_mod_urdf package to extract specific kinematic values fr
 > source ./install/setup.bash
 > ros2 run tm_driver tm_driver robot_ip:=<robot_ip_address>
 > ```
-> The parameter `<robot_ip_address>` means the IP address of your TM Robot, the user can get it through TM Flow.<br/>
+> The parameter `<robot_ip_address>` means the IP address of your TM Robot; the user can get it through TM Flow.<br/>
 > 
-> 2. In another new terminal: Source setup.bash in the workspace path, change the current directory to the directory path of the Python script to get the specific kinematic parameters of your TM Robot, and then enter the specified command format to generate a new name by the <urdf_gen> argument, for example, named user_defined.<br/>
+> 2. In another new terminal: Source setup.bash in the workspace path, change the current directory to the directory path of the Python script to get the specific kinematic parameters of your TM Robot, and then enter the specified command format to generate a new name using the <urdf_gen> argument, for example, named user_defined.<br/>
 > 
 > ```bash
 > source /opt/ros/jazzy/setup.bash
@@ -82,20 +82,20 @@ The user can use the tm_mod_urdf package to extract specific kinematic values fr
 >> <sup>4</sup> The following directory tree illustrates the mapping folder for the TM12S series:
 >> ```bash
 >> tm_description/cobot_s/tm12s_description/
->>                        ¢u¢w¢w launch/
->>                        ¢u¢w¢w meshes/
->>                        ¢u¢w¢w rviz/
->>                        ¢u¢w¢w xacro/
->>                            ¢u¢w¢w macro.tm12s-nominal.urdf.xacro
->>                            ¢u¢w¢w tm12s.urdf.xacro
->>                            ¢u¢w¢w macro.tm12s*-nominal.urdf.xacro
->>                            ¢u¢w¢w tm12s*.urdf.xacro
->>                            ¢u¢w¢w macro.materials.xacro
->>                            ¢|¢w¢w macro.xxxx*.xacro
->>                        ¢u¢w¢w CMakeLists.txt
->>                        ¢|¢w¢w package.xml
+>>                        â”œâ”€â”€ launch/
+>>                        â”œâ”€â”€ meshes/
+>>                        â”œâ”€â”€ rviz/
+>>                        â”œâ”€â”€ xacro/
+>>                        â”‚   â”œâ”€â”€  macro.tm12s-nominal.urdf.xacro
+>>                        â”‚   â”œâ”€â”€ tm12s.urdf.xacro
+>>                        â”‚   â”œâ”€â”€  macro.tm12s*-nominal.urdf.xacro
+>>                        â”‚   â”œâ”€â”€  tm12s*.urdf.xacro
+>>                        â”‚   â”œâ”€â”€  macro.materials.xacro
+>>                        â”‚   â””â”€â”€  macro.xxxx*.xacro
+>>                        â”œâ”€â”€ CMakeLists.txt
+>>                        â””â”€â”€ package.xml
 >> ```
->> For example: using a real `TM12SX` Robot: the step to modify the content format of the filename line in the `tm12sx.urdf.xacro` file:<br/>
+>> For example: using a real `TM12SX` Robot, the step to modify the content format of the filename line in the `tm12sx.urdf.xacro` file:<br/>
 >> ```bash
 >> # Before modification : (Take the pre-built TM12SX nominal robot model as an example) 
 >>   <xacro:include filename="$(find tm12s_description)/xacro/macro.tm12sx-nominal.urdf.xacro" />
