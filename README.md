@@ -138,8 +138,8 @@ This chapter describes how the user can use a script program to extract specific
 
 > [!IMPORTANT]
 > The tm_description package includes files and meshes _only_ for:<br/>
-> _TM12S Cobots Series_: TM12S only<br/>
-> _TM5-900 Cobots Series_: TM5-900 only<br/>
+> &emsp;_TM12S Cobots Series_: &ensp;TM12S only<br/>
+> &emsp;_TM5-900 Cobots Series_: &ensp;TM5-900 only<br/>
 > To download other models, please visit [TM_Cobots_ROS2_Description](https://github.com/TechmanRobotInc/TM_Cobots_ROS2_Description/).<br/>
 <div> </div>
 
