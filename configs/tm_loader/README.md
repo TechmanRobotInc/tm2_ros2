@@ -103,14 +103,14 @@ When executing `lite_ld.sh`, the script dynamically maps the model's lineage (e.
 ┗━ 📁 tm2_ros2/                          # TM ROS 2 standard source code directory (Acts as the 'src' space)
    ┣━ 📁 tm_description/                 # Robot Model Description Module (PACKAGE: tm_description)
    ┃  ┗━ 📁 cobot_s/                     # Auto-resolved series parent folder for TM S-Series
-   ┃     ┣━ 📁 tm12s_description/        # Default TM12S 3D meshes, URDF models, and Xacro files
-   ┃     ┗━ 📁 tm5s_description/         # Extracted via: ./lite_ld.sh tm12s
+   ┃     ┣━ 📁 tm12s_description/        # Extracted via: ./lite_ld.sh tm12s -f
+   ┃     ┗━ 📁 tm5s_description/         # Extracted via: ./lite_ld.sh tm5s tm_description
    ┣━ 📁 tm_moveit/                      # Motion Planning Module (PACKAGE: tm_moveit)
    ┃  ┗━ 📁 cobot_s/                     # Auto-anchored baseline location for TM S-Series
    ┃     ┗━ 📁 tm12s_moveit/             # Extracted via: ./lite_ld.sh tm12s tm_moveit
    ┗━ 📁 tm_gazebo/                      # Physics Simulation Module (PACKAGE: tm_gazebo)
       ┗━ 📁 cobot_s/                     # Auto-resolved series parent folder for TM S-Series
-         ┗━ 📁 tm12s_gazebo/             # Extracted via: ./lite_ld.sh tm5s tm_gazebo -f
+         ┗━ 📁 tm12s_gazebo/             # Extracted via: ./lite_ld.sh tm12s tm_gazebo
 ```
 
 ---
