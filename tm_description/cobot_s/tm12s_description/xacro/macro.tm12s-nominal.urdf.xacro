@@ -72,7 +72,7 @@
     <xacro:property name="izz_5" value="${3478.9518*unit_factor}" />
     <xacro:property name="izz_6" value="${1854.4783*unit_factor}" />
 
-    <xacro:property name="unit_factor2" value="0.001"/>
+    <xacro:property name="unit_factor2" value="0.000001"/>
     <xacro:property name="cogx_1" value="${ -1.0522458*unit_factor2}" />
     <xacro:property name="cogy_1" value="${ -5411.0119*unit_factor2}" />
     <xacro:property name="cogz_1" value="${ -2423.0910*unit_factor2}" />
