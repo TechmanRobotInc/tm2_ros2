@@ -164,8 +164,8 @@ def _gen_urdf(args=None):
     dh = [float(i) for i in dh_strs]
     dd = [float(i) for i in dd_strs]
 
-    # find urdf path
-    model_map = {
+    # Integrated Model Maps for Cobot S and Cobot series
+    model_map_s = {
         'tm3s': 'tm3s',
         'tm5s': 'tm5s',
         'tm6s': 'tm6s',
@@ -177,13 +177,37 @@ def _gen_urdf(args=None):
         'tm25s': 'tm25s',
         'tm30sc': 'tm30sc',
         'tm30s': 'tm30s',
+        'tm45s': 'tm45s',
+    }
+
+    model_map = {
+        'tm5-900': 'tm5_900',
+        'tm5x-900': 'tm5_900',
+        'tm5-700': 'tm5_700',
+        'tm5x-700': 'tm5_700',
+        'tm12': 'tm12',
+        'tm14': 'tm14',
+        'tm16': 'tm16',
+        'tm20': 'tm20',
     }
 
     series_name = ''
-    for key in model_map:
+    is_s_series = False
+
+    # Check for Cobot-S Series first
+    for key in model_map_s:
         if original_model.startswith(key):
-            series_name = model_map[key]
+            series_name = model_map_s[key]
+            is_s_series = True
             break
+
+    # Check for Cobot Series if not found in Cobot S-Series
+    if series_name == '':
+        for key in model_map:
+            if original_model.startswith(key):
+                series_name = model_map[key]
+                is_s_series = False
+                break
 
     if series_name == '':
         node.get_logger().error(f'unknown model series for: {original_model}')
@@ -202,7 +226,12 @@ def _gen_urdf(args=None):
 
     src_path = curr_path[:ind] + 'tm2_ros2'
     urdf_path = ''
-    target_sub_dir = os.path.join('tm_description', 'cobot_s', f'{series_name}_description', 'urdf')
+
+    # Dynamically select target subdirectory based on model generation
+    if is_s_series:
+        target_sub_dir = os.path.join('tm_description', 'cobot_s', f'{series_name}_description', 'xacro')
+    else:
+        target_sub_dir = os.path.join('tm_description', 'cobot', f'{series_name}_description', 'xacro')
 
     target_norm = os.path.normpath(target_sub_dir)
     for dirpath, dirnames, filenames in os.walk(src_path):

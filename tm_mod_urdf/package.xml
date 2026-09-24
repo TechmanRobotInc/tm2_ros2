@@ -2,7 +2,7 @@
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>tm_mod_urdf</name>
-  <version>3.0.0</version>
+  <version>3.1.0</version>
   <description>tm_mod_urdf</description>
 
   <maintainer email="ken.tsai@tm-robot.com">Ken Tsai</maintainer>

@@ -76,7 +76,7 @@ WS_ROOT=$HOME/tm2_ws
     ```bash
     ./lite_ld.sh tm5s tm_description
     ```
-*   **Scenario 2: Unattended Forced Update tm12s (Robot 3D Description Pack: Automatically to **`tm_description`** if omitted)**
+*   **Scenario 2: Unattended Forced Update for tm12s (Defaults automatically to `tm_description` if package is omitted)**
     ```bash
     ./lite_ld.sh tm12s -f
     ```
@@ -93,13 +93,13 @@ WS_ROOT=$HOME/tm2_ws
 
 ## 5. 🌿 Post-Deployment Workspace Topology
 
-After successfully executing the initialization scripts within your workspace (Example: `~/tm2_ws/tm2_ros2` or `~/user_ws/tm2_ros2`), the structural tree populates as modeled below:
+After successfully executing the initialization scripts within your workspace (Example: `~/tm2_ws/tm2_ros2` or `~/user_ws/tm2_ros2`), the structural tree populates as modeled below.
 *(Note: If your local setup utilizes an alternative directory path such as `~/user_ws/`, adjust the execution path accordingly.)*
 
-When executing `lite_ld.sh`, the script dynamically maps the model's lineage (e.g., classifying `tm5s` under the `cobot_s` directory tree). 
+When executing `lite_ld.sh`, the script dynamically maps the model's lineage (e.g., classifying `tm5s` under the `cobot_s` directory tree).
 
 ```text
-📁 tm2_ws/ (or catkin_ws/ or user_ws/)   # User's workspace root directory (from user_workspace.txt)
+📁 tm2_ws/ (or ros2_ws/ or user_ws/)      # User's workspace root directory (from user_workspace.txt)
 ┗━ 📁 tm2_ros2/                          # TM ROS 2 standard source code directory (Acts as the 'src' space)
    ┣━ 📁 tm_description/                 # Robot Model Description Module (PACKAGE: tm_description)
    ┃  ┗━ 📁 cobot_s/                     # Auto-resolved series parent folder for TM S-Series
@@ -120,7 +120,7 @@ When executing `lite_ld.sh`, the script dynamically maps the model's lineage (e.
 This paradigm maximizes hardware resource efficiency by gradually expanding your local development footprint only when features are requested.
 
 ```bash
-# Step 1: Deploy the core 3D kinematics description profile for tm7s (Automatically to **`tm_description`** if omitted)
+# Step 1: Deploy the core 3D kinematics description profile for tm7s (Defaults to tm_description if omitted)
 ./lite_ld.sh tm7s
 
 # Step 2: Dynamically append MoveIt 2 motion planning to the tm7s workspace
@@ -129,6 +129,7 @@ This paradigm maximizes hardware resource efficiency by gradually expanding your
 # Step 3: Expand the tm7s workspace to include Gazebo Sim physics environments
 ./lite_ld.sh tm7s tm_gazebo
 ```
+
 ---
 
 ## 7. 🔨 Compilation Workflow & Workspace Activation
@@ -140,7 +141,7 @@ Automatically pull down hardware communication libraries and external workspace 
 ```bash
 cd ~/tm2_ws
 rosdep update
-rosdep install --from-paths src --ignore-src -r -y
+rosdep install --from-paths tm2_ros2 --ignore-src -r -y
 ```
 
 #### Step 2: Build the Workspace
@@ -159,7 +160,7 @@ source install/setup.bash
 
 ## 8. 🩺 Troubleshooting & Diagnostics
 
-##### Error: `fatal: Protocol error: bad line length character` or Network Drops(Timeout)
+##### Error: `fatal: Protocol error: bad line length character` or Network Drops (Timeout)
 *   **Root Cause**: Local firewall restrictions, corporate proxy barriers, or transient GitHub server outages disrupting the sparse-checkout engine.
 *   **Remediation**: Force your local Git layer to expand network buffers using HTTP configurations:
     ```bash
