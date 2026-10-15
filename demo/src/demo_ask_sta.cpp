@@ -22,7 +22,7 @@ int main(int argc, char **argv)
   request->subcmd = "00";  // SubCmd 00: In external script control mode or not
   request->subdata = "";  // Subdata is not required and should be left empty for subcmd 00
 
-  /* 
+  /*
      Refer to Spec [ex: Queries whether the specific QueueTag number '1' has been executed completely or not]
      request->subcmd = "01";  // SubCmd 01: Complete the configured QueueTag numbering or not.
      request->subdata = "1";  // The specific QueueTag number (1-15), e.g., '1'

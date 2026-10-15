@@ -1,12 +1,31 @@
 #!/bin/bash
 ###########################################################################################
-# Script Name: deploy.sh                                                                  #
-# Description: Pure deployment wrapper for lite_ld.sh with dynamic package swapping       #
-# Version:     1.0.0                                                                      #
-# Usage:       ./deploy.sh [model_name]                                                   #
-# Example:     ./deploy.sh tm5s                                                           #
+# Script Name: deploy.sh
+# 
+# SPDX-FileCopyrightText: Copyright (c) 2026, TECHMAN ROBOT INC.
+# SPDX-FileContributor: yh.wang
+# SPDX-License-Identifier: BSD-3-Clause
+# 
+# Description: Pure deployment wrapper for lite_ld.sh with dynamic package swapping
+# Version:     1.1.0
+# Usage:       ./deploy.sh [model_name]
+# Example:     ./deploy.sh tm5s
 ###########################################################################################
 
+# ANSI Terminal Color Escape Codes
+RED='\033[1;31m'
+GREEN='\033[0;32m'
+YELLOW='\033[1;33m'
+BLUE='\033[1;34m'
+CYAN='\033[0;36m'
+NC='\033[0m' # No Color (Reset)
+
+# Set strict execution mode for robust error handling
+set -e
+set -o pipefail
+
+# Securely intercept user interrupts (Ctrl+C) to prevent false [SUCCESS] prompts
+trap "echo -e '\n${RED}[CANCELLED] Deployment process interrupted by user (Ctrl+C).${NC}'; exit 1" SIGINT SIGTERM
 
 # ==============================================================================
 # 0. Core Executable Options & Dynamic Target Package Swapping
@@ -60,12 +79,12 @@ fi
 # Assign fully verified workspace root derived from dynamic configurations
 WORKSPACE_ROOT="$WS_ROOT"
 
-echo "📂 Script Location   : $SCRIPT_DIR"
-echo "📂 Workspace Root    : $WORKSPACE_ROOT"
-echo "🤖 Target Model      : $COBOT_MODEL"
-# echo "📦 Target Package    : $TARGET_PKG"
-# echo "⚙️  Selected Binary  : ./${LOADER_BIN}"
-# echo "📜 Dispatched Cmd    : ${LOADER_CMD[*]}"
+echo -e "📂 Script Location   : $SCRIPT_DIR"
+echo -e "📂 Workspace Root    : $WORKSPACE_ROOT"
+echo -e "🤖 Target Model      : ${GREEN}$COBOT_MODEL${NC}"
+# echo -e "📦 Target Package    : ${CYAN}$TARGET_PKG${NC}"
+# echo -e "⚙️  Selected Binary  : ./${LOADER_BIN}"
+# echo -e "📜 Dispatched Cmd    : ${YELLOW}${LOADER_CMD[*]}${NC}"
 echo "============================================================================"
 
 # ==============================================================================
@@ -78,7 +97,7 @@ for dist in /opt/ros/*; do
     if [ -f "$dist/setup.bash" ]; then
         source "$dist/setup.bash"
         ros_distro_name=$(basename "$dist")
-        echo "✅ Loaded ROS 2 ($ros_distro_name) Environment automatically."
+        echo -e "✅ Loaded ROS 2 (${CYAN}$ros_distro_name${NC}) Environment automatically."
         ros_sourced=true
         break 
     fi
@@ -86,7 +105,7 @@ done
 
 # If no active ROS 2 installation path is verified, terminate execution safely
 if [ "$ros_sourced" = false ]; then
-    echo "❌ Error: No valid system ROS 2 installation found under /opt/ros/*!"
+    echo -e "${RED}❌ Error: No valid system ROS 2 installation found under /opt/ros/*!${NC}"
     exit 1
 fi
 
@@ -99,7 +118,7 @@ cd "$SCRIPT_DIR" || exit 1
 # Verify if the chosen loader binary actually exists in the local environment
 if [ ! -f "./${LOADER_BIN}" ]; then
     echo "============================================================================"
-    echo "❌ Error: Configured loader file './${LOADER_BIN}' not found!"
+    echo -e "${RED}❌ Error: Configured loader file './${LOADER_BIN}' not found!${NC}"
     echo "   Please check if the filename changed or if it exists in this directory."
     echo "============================================================================"
     exit 1
@@ -110,7 +129,7 @@ chmod +x "./${LOADER_BIN}"
 # Execute the robustly tokenized command array directly
 if ! "${LOADER_CMD[@]}"; then
     echo "============================================================================"
-    echo "❌ Error: Deployment failed via ./${LOADER_BIN}! Aborting compilation."
+    echo -e "${RED}❌ Error: Deployment failed via ./${LOADER_BIN}! Aborting compilation.${NC}"
     echo "============================================================================"
     exit 1
 fi
@@ -124,7 +143,7 @@ sleep 3s
 echo "============================================================================"
 echo "🛠️  Cleaning Workspace Cache and Rebuilding ROS 2 Workspace..."
 echo "============================================================================"
-cd "$WORKSPACE_ROOT" || { echo -e "❌ Error: Cannot access Workspace Root directory: $WORKSPACE_ROOT"; exit 1; }
+cd "$WORKSPACE_ROOT" || { echo -e "${RED}❌ Error: Cannot access Workspace Root directory: $WORKSPACE_ROOT${NC}"; exit 1; }
 
 # Erase old compilation artifacts to prevent cross-branch code caching issues
 rm -rf build/ install/ log/
@@ -145,11 +164,11 @@ colcon build \
 if [ -f "./install/setup.bash" ]; then
     source ./install/setup.bash
     echo "============================================================================"
-    echo "✅ Success: Workspace rebuilt and environmental paths loaded successfully!"
+    echo -e "${GREEN}✅ Success: Workspace rebuilt and environmental paths loaded successfully!${NC}"
     echo "============================================================================"
 else
     echo "============================================================================"
-    echo "⚠️  Warning: Compilation might have failed. './install/setup.bash' not found."
+    echo -e "${YELLOW}⚠️  Warning: Compilation might have failed. './install/setup.bash' not found.${NC}"
     echo "============================================================================"
     exit 1
 fi

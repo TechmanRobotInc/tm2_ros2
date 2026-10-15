@@ -4,6 +4,8 @@
 #include "tm_msgs/msg/sct_response.hpp"
 using std::placeholders::_1;
 
+namespace {
+
 class MinimalSubscriber : public rclcpp::Node
 {
 public:
@@ -21,6 +23,8 @@ private:
 
   rclcpp::Subscription<tm_msgs::msg::SctResponse>::SharedPtr subscription_;
 };
+
+} // namespace
 
 int main(int argc, char * argv[])
 {

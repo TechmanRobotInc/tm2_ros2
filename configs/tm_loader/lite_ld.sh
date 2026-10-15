@@ -1,16 +1,31 @@
 #!/bin/bash
 ###########################################################################################
-# Script Name: lite_ld.sh                                                                 #
-# Description: Techman Robot Deployment Loader Script - Lite Download Wrapper             #
-# Version:     1.1.0                                                                      #
-# Usage:       ./lite_ld.sh [MODEL] [PACKAGE (optional)] [-f (optional)]                  #
+# Script Name: lite_ld.sh
+# 
+# SPDX-FileCopyrightText: Copyright (c) 2026, TECHMAN ROBOT INC.
+# SPDX-FileContributor: yh.wang
+# SPDX-License-Identifier: BSD-3-Clause
+# 
+# Description: Techman Robot Deployment Loader Script - Lite Download Wrapper
+# Version:     1.2.0
+# Usage:       ./lite_ld.sh [MODEL] [PACKAGE (optional)] [-f (optional)]
 ###########################################################################################
 
 # ANSI Terminal Color Escape Codes
+RED='\033[1;31m'
 GREEN='\033[0;32m'
 YELLOW='\033[1;33m'
-RED='\033[1;31m'
+BLUE='\033[1;34m'
+PURPLE='\033[1;35m'
+CYAN='\033[0;36m'
 NC='\033[0m' # No Color (Reset)
+
+# Set strict execution mode for robust error handling
+set -e
+set -o pipefail
+
+# Securely intercept user interrupts (Ctrl+C) to prevent false [SUCCESS] prompts
+trap "echo -e '\n${RED}[CANCELLED] Deployment process interrupted by user (Ctrl+C).${NC}'; exit 1" SIGINT SIGTERM
 
 # ==============================================================================
 # 1. Load Configuration File

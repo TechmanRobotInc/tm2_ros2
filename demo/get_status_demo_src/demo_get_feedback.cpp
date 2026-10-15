@@ -4,6 +4,8 @@
 #include "tm_msgs/msg/feedback_state.hpp"
 using std::placeholders::_1;
 
+namespace {
+
 class MinimalSubscriber : public rclcpp::Node
 {
 public:
@@ -26,6 +28,8 @@ private:
 
   rclcpp::Subscription<tm_msgs::msg::FeedbackState>::SharedPtr subscription_;
 };
+
+} // namespace
 
 int main(int argc, char * argv[])
 {
