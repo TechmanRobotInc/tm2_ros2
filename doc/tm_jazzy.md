@@ -7,7 +7,7 @@ The TM ROS driver is designed to interface the TM Robot's operating software (__
 >> :bulb: The operation interface of _TMflow2_: Navigate to __≡__ and click to expand the function menu, including the icons __Login/Logout__, __Connect__, __View__, __Run Setting__, __Project__, __Configuration__, and __System__. Please refer to _Software Manual TMflow_ ([SW2.14_Rev1.00](https://www.tm-robot.com/zh-hant/support/download-center/)).<br/>
 >
 > * Just clone the TM ROS driver from the git repository into your working directory and then build it.<br/>
-> * The user can directly return to "__[4. TM Program Script Demonstration](./tm_jazzy_demo.md)__" introduced above: then refer to steps 1 to 4 of this chapter __&sect; Use the demo code and drivers on an external Linux PC__.<br/>
+> * The user can directly return to "__[4. TM Program Script Demonstration](./tm_jazzy_demo.md)__" introduced above: then refer to steps 1 to 4 of this chapter __&sect; Usage with demo code & driver on the external Linux PC__.<br/>
 >
 > &#10148;  After installing the correct ROS version on the computer, the next step is to ensure that your hardware, control computer, and TM Robot are all properly configured to communicate with each other. See below to make sure the network settings on your computer are correct, the TM Robot's operating software (_TMflow 2_) network settings are ready, and the __Listen node__ is running.<br/>
 <div> </div>
