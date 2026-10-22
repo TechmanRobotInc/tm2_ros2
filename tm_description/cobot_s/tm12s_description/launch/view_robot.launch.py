@@ -43,6 +43,8 @@ def launch_setup(context, *args, **kwargs):
         series_folder = 'tm20s_description'
     elif 'tm25s' in robot_model_arg:
         series_folder = 'tm25s_description'
+    elif 'tm45s' in robot_model_arg:
+        series_folder = 'tm45s_description'
     elif 'tm30sc' in robot_model_arg:
         series_folder = 'tm30sc_description'
     elif 'tm30s' in robot_model_arg:
@@ -71,20 +73,10 @@ def launch_setup(context, *args, **kwargs):
     if not os.path.exists(robot_description_file):
         raise FileNotFoundError(f"\n[ERROR] Target Xacro file not found at: {robot_description_file}\n")
 
-    robot_description_config = xacro.process_file(
-        robot_description_file
-    )
-    robot_description = {'robot_description': robot_description_config.toxml()}
+    robot_description_config = xacro.process_file(robot_description_file)
+    urdf_xml_content = robot_description_config.toxml()
+    robot_description = {'robot_description': urdf_xml_content}
     # -------------------------------------------------------------------------
-
-    # Static TF
-    static_tf = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        name='static_transform_publisher',
-        output='log',
-        arguments=['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', 'world', 'base']
-    )
 
     # Publish TF
     robot_state_publisher_node = Node(
@@ -93,7 +85,9 @@ def launch_setup(context, *args, **kwargs):
         name='robot_state_publisher',
         output='both',
         parameters=[
-            robot_description
+            robot_description,
+            {'publish_frequency': 50.0},
+            {'ignore_timestamp': True}
         ]
     )
 
@@ -102,7 +96,8 @@ def launch_setup(context, *args, **kwargs):
         package='joint_state_publisher_gui',
         executable='joint_state_publisher_gui',
         name='joint_state_publisher_gui',
-        output=['screen']
+        output=['screen'],
+        parameters=[robot_description]
     )
 
     # Visualize in RViz2
@@ -113,13 +108,13 @@ def launch_setup(context, *args, **kwargs):
         output='log',
         arguments=['-d', rviz_config_file],
         parameters=[
-            robot_description
+            robot_description,
+            {'robot_description_source': 'parameter'}
         ]
     )
 
     # List of nodes to be launched
     return [
-        static_tf,
         robot_state_publisher_node,
         joint_state_slider,
         rviz_node,

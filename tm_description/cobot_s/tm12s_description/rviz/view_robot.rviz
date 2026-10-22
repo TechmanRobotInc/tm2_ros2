@@ -64,6 +64,10 @@ Visualization Manager:
           Alpha: 1
           Show Axes: false
           Show Trail: false
+        ft_frame:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
         link_1:
           Alpha: 1
           Show Axes: false
@@ -103,11 +107,13 @@ Visualization Manager:
         Mass: false
       Name: RobotModel
       TF Prefix: ""
-      Update Interval: 0
+      Update Interval: 0.1
       Value: true
       Visual Enabled: true
     - Class: rviz_default_plugins/TF
       Enabled: false
+      Filter (blacklist): ""
+      Filter (whitelist): ""
       Frame Timeout: 15
       Frames:
         All Enabled: true

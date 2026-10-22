@@ -71,15 +71,6 @@ def launch_setup(context, *args, **kwargs):
     robot_description = {'robot_description': robot_description_config.toxml()}
     # -------------------------------------------------------------------------
 
-    # Static TF
-    static_tf = Node(
-        package='tf2_ros',
-        executable='static_transform_publisher',
-        name='static_transform_publisher',
-        output='log',
-        arguments=['0.0', '0.0', '0.0', '0.0', '0.0', '0.0', 'world', 'base']
-    )
-
     # Publish TF
     robot_state_publisher_node = Node(
         package='robot_state_publisher',
@@ -113,7 +104,6 @@ def launch_setup(context, *args, **kwargs):
 
     # List of nodes to be launched
     return [
-        static_tf,
         robot_state_publisher_node,
         joint_state_slider,
         rviz_node,
