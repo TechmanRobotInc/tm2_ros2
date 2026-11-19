@@ -1,4 +1,4 @@
-# __TM External GUI debugging and Demonstration__
+# __TM External GUI Debugging & Diagnostics__
 This chapter describes a simplified GUI for displaying tm_driver connection status, sct, sta, svr messages, and robot status. The user can optionally install the _tm_inspect_ package to aid in viewing messages between the driver and the robot through the GUI display.
 
 ## &sect; GUI Debugging description

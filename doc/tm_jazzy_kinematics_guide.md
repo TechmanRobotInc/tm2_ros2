@@ -1,4 +1,4 @@
-# __Generate your TM Robot-Specific Kinematics Parameters Files__
+# __Generating Robot-Specific Kinematics Files__
 Real kinematic values vary from one TM robot to another, as each robot is calibrated at the factory.<br/>
 The user can use the tm_mod_urdf package to extract specific kinematic values from your TM robot, which are taken into account by a Python script function using a specific set of commands to automatically generate a new Xacro robot model description file.
 > If the user just wants to use the TM Robot nominal model to control the robot, the user can skip the rest of this chapter.<br/>
